@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>David Santiago — Desarrollador Web Granada</title>
+<link rel="stylesheet" href="styles.css?v=4"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><img src="dsb-blanco-Photoroom.png" alt="DSB" class="nav-logo-img"/></div>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre mí</a></li>
+    <li><a href="#trayectoria">Trayectoria</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Contactar</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-top" data-reveal>
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Disponible para proyectos
+      </div>
+      <div class="hero-clock" id="hero-clock">--:--</div>
+    </div>
+    <div class="hero-main">
+      <div class="hero-name-block" data-reveal data-delay="1">
+        <h1 class="hero-name">David<br/>Santiago<span>.</span></h1>
+        <div class="hero-role">
+          <span class="hero-role-arrow">☞</span>
+          Desarrollador Web · Granada
+        </div>
+      </div>
+      <div class="hero-cube-wrap" data-reveal data-delay="3">
+        <div class="cube" id="hero-cube">
+          <div class="cube-face cube-f"><div class="rk-grid">
+            <span style="--c:#e8621a"></span><span style="--c:#e8621a"></span><span style="--c:#e8dcc8"></span>
+            <span style="--c:#e8621a"></span><span style="--c:#e8621a"></span><span style="--c:#e8621a"></span>
+            <span style="--c:#f0ede8"></span><span style="--c:#e8621a"></span><span style="--c:#e8621a"></span>
+          </div></div>
+          <div class="cube-face cube-bk"><div class="rk-grid">
+            <span style="--c:#e8dcc8"></span><span style="--c:#e8dcc8"></span><span style="--c:#e8621a"></span>
+            <span style="--c:#e8dcc8"></span><span style="--c:#e8dcc8"></span><span style="--c:#e8dcc8"></span>
+            <span style="--c:#e8dcc8"></span><span style="--c:#e8dcc8"></span><span style="--c:#e8dcc8"></span>
+          </div></div>
+          <div class="cube-face cube-l"><div class="rk-grid">
+            <span style="--c:#555"></span><span style="--c:#555"></span><span style="--c:#555"></span>
+            <span style="--c:#555"></span><span style="--c:#555"></span><span style="--c:#e8621a"></span>
+            <span style="--c:#555"></span><span style="--c:#555"></span><span style="--c:#555"></span>
+          </div></div>
+          <div class="cube-face cube-r"><div class="rk-grid">
+            <span style="--c:#f0ede8"></span><span style="--c:#f0ede8"></span><span style="--c:#f0ede8"></span>
+            <span style="--c:#f0ede8"></span><span style="--c:#f0ede8"></span><span style="--c:#f0ede8"></span>
+            <span style="--c:#e8621a"></span><span style="--c:#f0ede8"></span><span style="--c:#f0ede8"></span>
+          </div></div>
+          <div class="cube-face cube-t"><div class="rk-grid">
+            <span style="--c:#e8621a"></span><span style="--c:#555"></span><span style="--c:#e8dcc8"></span>
+            <span style="--c:#555"></span><span style="--c:#e8dcc8"></span><span style="--c:#555"></span>
+            <span style="--c:#e8dcc8"></span><span style="--c:#555"></span><span style="--c:#e8621a"></span>
+          </div></div>
+          <div class="cube-face cube-b"><div class="rk-grid">
+            <span style="--c:#1a1a1a"></span><span style="--c:#1a1a1a"></span><span style="--c:#1a1a1a"></span>
+            <span style="--c:#1a1a1a"></span><span style="--c:#1a1a1a"></span><span style="--c:#e8621a"></span>
+            <span style="--c:#1a1a1a"></span><span style="--c:#e8621a"></span><span style="--c:#1a1a1a"></span>
+          </div></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom" data-reveal data-delay="2">
+      <p class="hero-bio">Diseño y construyo webs que <em>la gente recuerda</em> — desde la idea hasta el servidor. Experiencia real en <span class="hero-kw">WordPress</span>, <span class="hero-kw">Laravel</span>, <span class="hero-kw">SQL en producción</span> e integración de <span class="hero-kw">IA</span>. Primera consulta siempre sin coste.</p>
+      <div class="hero-right">
+        <span class="hero-location">Maracena → Granada, ES</span>
+        <div class="hero-links">
+          <a href="https://github.com/davidodo123" target="_blank">GitHub</a>
+          <a href="https://mail.google.com/mail/?view=cm&to=davidsantiagoybermudez@gmail.com" target="_blank">Gmail</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre">
+  <div class="sobre-grid">
+    <div class="sobre-photo-wrap" data-reveal>
+      <img src="https://avatars.githubusercontent.com/u/187556243?v=4"
+           alt="David Santiago Bermúdez"
+           class="sobre-photo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="sobre-photo-ph" style="display:none">👨‍💻</div>
+    </div>
+    <div class="sobre-content" data-reveal data-delay="2">
+      <h2>Soy David,<br/>desarrollador web<br/>de <span>Granada.</span></h2>
+      <p>22 años. Bachiller de Ciencias con <strong style="color:var(--white)">Selectividad 9.8</strong>, dos años de Ingeniería Electrónica en la UJA y ahora DAW en el IES Zaidín Vergeles. Me pasé al desarrollo web por vocación — quiero construir cosas reales, no solo estudiarlas.</p>
+      <p>He hecho prácticas en <strong style="color:var(--white)">dos empresas reales de Granada</strong>: bases de datos SQL en producción, WordPress desde el servidor, migración a Laravel con Blade, automatizaciones con cron, integración de chatbots e <strong style="color:var(--white)">IA (OpenCode)</strong>. No solo teoría.</p>
+      <p>Me obsesiona que cada web transmita algo. Que cuando alguien llegue a la web de tu negocio, lo primero que piense sea <em style="color:var(--orange)">"esto es serio"</em>. Primera consulta siempre sin coste — me desplazo a donde haga falta por Granada.</p>
+      <div class="skills-list">
+        <span class="skill-pill">HTML & CSS</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">WordPress</span>
+        <span class="skill-pill">Laravel</span>
+        <span class="skill-pill">PHP / AJAX</span>
+        <span class="skill-pill">SQL</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">Cron / CLI</span>
+        <span class="skill-pill">Diseño web</span>
+        <span class="skill-pill">Git & GitHub</span>
+        <span class="skill-pill">VPS & Hosting</span>
+        <span class="skill-pill">IA & Chatbots</span>
+      </div>
+      <div class="sobre-cv-row">
+        <a href="MiCV.pdf" target="_blank" class="cv-btn">
+          <i class="fa-solid fa-file-pdf"></i> Ver Currículum
+        </a>
+        <a href="MiCV.pdf" download="David_Santiago_CV.pdf" class="cv-btn cv-btn-ghost">
+          <i class="fa-solid fa-download"></i> Descargar
+        </a>
+      </div>
+      <div class="sobre-info">
+        <div class="si-item">
+          <div class="si-label">Ubicación</div>
+          <div class="si-val">Maracena, Granada</div>
+        </div>
+        <div class="si-item">
+          <div class="si-label">Selectividad</div>
+          <div class="si-val" style="color:var(--orange)">9.8 / 10</div>
+        </div>
+        <div class="si-item">
+          <div class="si-label">Disponibilidad</div>
+          <div class="si-val">Inmediata</div>
+        </div>
+        <div class="si-item">
+          <div class="si-label">Inglés</div>
+          <div class="si-val">B2 certificado</div>
+        </div>
+        <div class="si-item">
+          <div class="si-label">GitHub</div>
+          <div class="si-val"><a href="https://github.com/davidodo123" target="_blank" style="color:var(--orange);text-decoration:none">davidodo123</a></div>
+        </div>
+        <div class="si-item">
+          <div class="si-label">Desplazamiento</div>
+          <div class="si-val">Granada y provincia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TRAYECTORIA -->
+<section id="trayectoria">
+  <div class="s-header" data-reveal>
+    <div class="s-tag">// Trayectoria</div>
+    <h2 class="s-title">Experiencia & Formación</h2>
+    <p class="s-sub">De la teoría a la producción real. Prácticas en empresas de Granada, bases de datos en vivo y tecnologías actuales.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="tray-stats" data-reveal>
+    <div class="tray-stat">
+      <span class="tray-stat-num">3</span>
+      <span class="tray-stat-label">Experiencias</span>
+    </div>
+    <div class="tray-stat">
+      <span class="tray-stat-num">9.8</span>
+      <span class="tray-stat-label">Selectividad</span>
+    </div>
+    <div class="tray-stat">
+      <span class="tray-stat-num">12+</span>
+      <span class="tray-stat-label">Tecnologías</span>
+    </div>
+    <div class="tray-stat">
+      <span class="tray-stat-num">3</span>
+      <span class="tray-stat-label">Certif. externos</span>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tray-tabs" data-reveal>
+    <button class="tray-tab active" data-tab="exp">Experiencia</button>
+    <button class="tray-tab" data-tab="edu">Formación</button>
+  </div>
+
+  <!-- Experiencia Panel -->
+  <div class="tray-panel" id="tray-exp">
+    <div class="tray-timeline">
+
+      <div class="tray-item" data-reveal>
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Desguace Suspiro</div>
+              <div class="tray-role">Desarrollador Web — Prácticas DAW Año 2</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">Feb – Mayo 2026</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Granada</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Administración y gestión de servidor WordPress en producción</li>
+            <li>Desarrollo de vistas, plugins, clases y peticiones <strong>AJAX en PHP</strong> para WordPress</li>
+            <li>Pruebas de migración WP → Laravel: maquetación de plantillas <strong>Blade</strong></li>
+            <li>Automatización de procesos con scripts y tareas programadas con <strong>cron</strong></li>
+            <li>Testeo e integración de <strong>chatbots</strong> para uso empresarial</li>
+            <li>Implementación de <strong>OpenCode</strong> (IA open source): skills y prompts personalizados</li>
+            <li>Consultas avanzadas a BD, indexación y <strong>optimización de rendimiento SQL</strong></li>
+            <li>Gestión y análisis de datos con <strong>Excel</strong> de forma intensiva</li>
+          </ul>
+          <div class="tray-tags">
+            <span>WordPress</span><span>PHP</span><span>AJAX</span><span>Laravel</span><span>Blade</span><span>Cron</span><span>SQL</span><span>IA / OpenCode</span><span>Excel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="1">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Cooperativa FAECA</div>
+              <div class="tray-role">Desarrollador Web — Prácticas DAW Año 1</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">Mayo 2025</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Maracena</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Desarrollo y mantenimiento web con <strong>WordPress y Laravel</strong></li>
+            <li>Gestión de <strong>bases de datos SQL en entorno de producción</strong> real</li>
+            <li>Soporte técnico e integración de sistemas</li>
+          </ul>
+          <div class="tray-tags">
+            <span>WordPress</span><span>Laravel</span><span>SQL</span><span>PHP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="2">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Trabajador Agrícola — Cultivo de Olivo</div>
+              <div class="tray-role">Negocio familiar · Campaña de aceituna</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2022 – Actualidad</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Granada</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Mantenimiento y cuidado de olivos durante la <strong>campaña de aceituna</strong></li>
+            <li>Trabajo en equipo familiar gestionando las tareas del campo</li>
+            <li>Desarrollo de <strong>responsabilidad, esfuerzo y constancia</strong> en entornos exigentes</li>
+          </ul>
+          <div class="tray-tags">
+            <span>Trabajo en equipo</span><span>Responsabilidad</span><span>Constancia</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Formación Panel -->
+  <div class="tray-panel hidden" id="tray-edu">
+    <div class="tray-timeline">
+
+      <div class="tray-item" data-reveal>
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Desarrollo de Aplicaciones Web (DAW)</div>
+              <div class="tray-role">IES Zaidín Vergeles · Grado Superior</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2024 – 2026</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Granada</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Prácticas año 1: Cooperativa FAECA (mayo 2025)</li>
+            <li>Prácticas año 2: Desguace Suspiro (feb – mayo 2026)</li>
+          </ul>
+          <div class="tray-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>Laravel</span><span>SQL</span><span>WordPress</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="1">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Ingeniería Electrónica</div>
+              <div class="tray-role">Universidad de Jaén (UJA)</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2022 – 2024</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Jaén</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>2 años completados · Media 6.4</li>
+            <li>Curso verificado <strong>Valeo</strong> (3h)</li>
+          </ul>
+          <div class="tray-tags">
+            <span>Electrónica</span><span>Programación</span><span>Valeo Certificado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="2">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Bachiller Ciencias</div>
+              <div class="tray-role">IES Manuel de Falla, Maracena</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2020 – 2022</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Maracena</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Media 8.2 · <strong style="color:var(--orange)">Selectividad 9.8</strong></li>
+            <li>Curso de Arduino (30h)</li>
+          </ul>
+          <div class="tray-tags">
+            <span>Ciencias</span><span>Selectividad 9.8</span><span>Arduino 30h</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Certificados -->
+  <div class="certs-row" data-reveal>
+    <div class="cert-badge">
+      <i class="fa-brands fa-google"></i>
+      <span>IA Certificado Google</span>
+    </div>
+    <div class="cert-badge">
+      <i class="fa-solid fa-industry"></i>
+      <span>Valeo Certificado</span>
+    </div>
+    <div class="cert-badge">
+      <i class="fa-solid fa-language"></i>
+      <span>Inglés B2</span>
+    </div>
+    <div class="cert-badge">
+      <i class="fa-solid fa-car"></i>
+      <span>Carnet de Conducir B1</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="proj-track" id="proj-track">
+    <div class="proj-sticky" id="proj-sticky">
+
+      <!-- label -->
+      <div class="proj-label">
+        <span class="proj-label-tag">// Proyectos</span>
+        <span class="proj-label-count" id="proj-count">01 / 06</span>
+      </div>
+
+      <!-- 01 -->
+      <div class="proj-slide" data-idx="0">
+        <div class="proj-slide-card">
+          <img src="top.png" alt="Portfolio TØP"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">01</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Portfolio TØP</div>
+              <div class="proj-card-tags"><span>Diseño editorial</span><span>Animaciones</span><span>Identidad visual</span></div>
+              <a href="https://lightyellow-narwhal-328119.hostingersite.com/top/" target="_blank" class="proj-slide-link">Ver proyecto →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="proj-slide" data-idx="1">
+        <div class="proj-slide-card">
+          <img src="peru.png" alt="Peru"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">02</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Peru</div>
+              <div class="proj-card-tags"><span>Turismo</span><span>Diseño inmersivo</span><span>Demo live</span></div>
+              <a href="https://lightyellow-narwhal-328119.hostingersite.com/Triptour/" target="_blank" class="proj-slide-link">Ver proyecto →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="proj-slide" data-idx="2">
+        <div class="proj-slide-card">
+          <img src="Moi.png" alt="Moi"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">03</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Moi</div>
+              <div class="proj-card-tags"><span>Restauración</span><span>Lujo</span><span>Elegancia</span></div>
+              <a href="https://lightyellow-narwhal-328119.hostingersite.com/Moi/" target="_blank" class="proj-slide-link">Ver proyecto →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="proj-slide" data-idx="3">
+        <div class="proj-slide-card">
+          <img src="adoptar.png" alt="Viajesa"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">04</span><span class="proj-card-tech">Laravel · PHP</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Petside</div>
+              <div class="proj-card-tags"><span>Full-stack</span><span>Laravel</span><span>Base de datos</span></div>
+              <a href="https://lightyellow-narwhal-328119.hostingersite.com/adoptar/public/" target="_blank" class="proj-slide-link">Ver proyecto →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="proj-slide" data-idx="4">
+        <div class="proj-slide-card">
+          <img src="learnio.png" alt="Movies"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">05</span><span class="proj-card-tech">Laravel · Blade</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Learnio</div>
+              <div class="proj-card-tags"><span>Red social</span><span>Autenticación</span><span>CRUD</span></div>
+              <a href="https://lightyellow-narwhal-328119.hostingersite.com/learnio/" target="_blank" class="proj-slide-link">Ver proyecto →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="proj-slide" data-idx="5">
+        <div class="proj-slide-card">
+          <img src="Skylander.png" alt="Skylander"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">06</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Skylander</div>
+              <div class="proj-card-tags"><span>Deporte</span><span>Adrenalina</span><span>Diseño agresivo</span></div>
+              <a href="https://lightyellow-narwhal-328119.hostingersite.com/Sky/" target="_blank" class="proj-slide-link">Ver proyecto →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- progress bar -->
+      <div class="proj-progress-wrap">
+        <div class="proj-progress-bar" id="proj-progress-bar"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="s-header" data-reveal>
+    <div class="s-tag">// Servicios</div>
+    <h2 class="s-title">¿Qué necesita tu negocio?</h2>
+    <p class="s-sub">Dos tipos de webs, un único objetivo: que tu negocio se vea profesional en internet.</p>
+  </div>
+
+  <div class="servicios-wrap">
+    <div>
+      <div class="tipo-card" data-reveal data-delay="1">
+        <div class="tipo-head">
+          <div class="tipo-icon"><i class="fa-solid fa-file-code"></i></div>
+          <div>
+            <h3>Web Estática</h3>
+            <div class="tipo-subtitle">Para negocios que quieren presencia online</div>
+          </div>
+        </div>
+        <div class="tipo-body">
+          <p class="tipo-desc">Una web estática es como un folleto digital siempre disponible. Sin panel de administración ni base de datos — páginas fijas con tu información, fotos y contacto. Perfecta si solo necesitas que la gente te encuentre en internet y vea lo que haces.</p>
+          <ul class="tipo-features">
+            <li>Diseño completamente a medida, no plantillas genéricas</li>
+            <li>Adaptada a móvil, tablet y ordenador</li>
+            <li>Carga ultra rápida (sin base de datos)</li>
+            <li>SSL incluido (el candado de seguridad en el navegador)</li>
+            <li>Formulario de contacto</li>
+            <li>Optimización básica para aparecer en Google</li>
+          </ul>
+          <div class="tipo-price-row">
+            <span class="tipo-price">450 – 500€</span>
+            <span class="tipo-price-sub">pago único</span>
+          </div>
+          <div class="hosting-note">+ 20€/mes gestión en servidor</div>
+        </div>
+      </div>
+
+      <div class="tipo-card" data-reveal data-delay="2">
+        <div class="tipo-head">
+          <div class="tipo-icon"><i class="fa-solid fa-gear"></i></div>
+          <div>
+            <h3>Web Dinámica</h3>
+            <div class="tipo-subtitle">Para negocios que necesitan más</div>
+          </div>
+        </div>
+        <div class="tipo-body">
+          <p class="tipo-desc">Una web dinámica tiene un motor detrás: base de datos, panel de administración, usuarios, reservas, catálogos... Tú puedes actualizar el contenido sin saber programar. Ideal si necesitas gestionar algo — un catálogo de productos, citas, menús, noticias...</p>
+          <ul class="tipo-features">
+            <li>Todo lo de la web estática, más...</li>
+            <li>Panel de administración para gestionar contenido</li>
+            <li>Base de datos propia (catálogos, reservas, usuarios)</li>
+            <li>WordPress o Laravel según el proyecto</li>
+            <li>Formularios avanzados, reservas, tienda online</li>
+            <li>Múltiples páginas e idiomas si hace falta</li>
+          </ul>
+          <div class="tipo-price-row">
+            <span class="tipo-price">Presupuesto</span>
+            <span class="tipo-price-sub">según proyecto</span>
+          </div>
+          <div class="hosting-note">+ 20€/mes gestión en servidor</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="hosting-box" data-reveal>
+        <h3><i class="fa-solid fa-server"></i> ¿Dónde alojo tu web?</h3>
+        <p>Me encargo de todo lo técnico para que tu web esté siempre online y segura. Utilizo servidores profesionales en Europa con alta disponibilidad y backups automáticos.</p>
+        <div class="hosting-grid">
+          <div class="hg-item">
+            <strong>Servidor VPS</strong>
+            <span>Hetzner o DigitalOcean (EU). Alta disponibilidad y rendimiento real.</span>
+          </div>
+          <div class="hg-item">
+            <strong>Dominio incluido</strong>
+            <span>Registro y gestión del dominio .es o .com de tu negocio.</span>
+          </div>
+          <div class="hg-item">
+            <strong>SSL gratuito</strong>
+            <span>Certificado HTTPS automático con Let's Encrypt. Seguridad sin coste extra.</span>
+          </div>
+          <div class="hg-item">
+            <strong>Backups semanales</strong>
+            <span>Copias de seguridad para que no pierdas nada si algo falla.</span>
+          </div>
+          <div class="hg-item">
+            <strong>Webs estáticas</strong>
+            <span>En Vercel o Netlify — gratis y ultra rápidas para webs sin backend.</span>
+          </div>
+          <div class="hg-item">
+            <strong>Soporte continuo</strong>
+            <span>Cualquier problema o cambio que necesites, te lo resuelvo.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hosting-box" style="background:rgba(232,98,26,0.06);border-color:rgba(232,98,26,0.2)">
+        <h3 style="color:var(--orange)">¿Qué incluyen los 20€/mes?</h3>
+        <p>No es solo "tener la web encendida". Con la gestión mensual me encargo de:</p>
+        <ul class="tipo-features">
+          <li>Servidor siempre activo y monitorizado</li>
+          <li>Actualizaciones de seguridad automáticas</li>
+          <li>Backups semanales de la web y datos</li>
+          <li>Pequeños cambios de contenido (textos, fotos, precios)</li>
+          <li>Soporte directo por WhatsApp</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PALETAS -->
+<section id="paletas">
+  <div class="s-header" data-reveal>
+    <div class="s-tag">// Estilo</div>
+    <h2 class="s-title">Mis paletas favoritas</h2>
+    <p class="s-sub">El diseño empieza por el color. Cada paleta cuenta una historia diferente para tu negocio.</p>
+  </div>
+  <div class="paletas-grid">
+    <div class="paleta-card" data-reveal data-delay="1">
+      <div class="paleta-preview">
+        <div style="background:#0047FF"></div>
+        <div style="background:#0a2fa8"></div>
+        <div style="background:#e8f0ff"></div>
+        <div style="background:#ffffff"></div>
+      </div>
+      <div class="paleta-body">
+        <div class="paleta-name">Azul Eléctrico + Blanco</div>
+        <p class="paleta-desc">Confianza, tecnología y modernidad. Perfecta para empresas de servicios, tecnología o negocios que quieren transmitir profesionalidad y seriedad.</p>
+        <div class="paleta-swatches">
+          <div class="swatch" style="background:#0047FF;color:#fff">#0047FF</div>
+          <div class="swatch" style="background:#0a2fa8;color:#fff">#0A2FA8</div>
+          <div class="swatch" style="background:#e8f0ff;color:#333">#E8F0FF</div>
+          <div class="swatch" style="background:#ffffff;color:#333;border:1px solid #ddd">#FFF</div>
+        </div>
+      </div>
+    </div>
+    <div class="paleta-card" data-reveal data-delay="2">
+      <div class="paleta-preview">
+        <div style="background:#f5f0e8"></div>
+        <div style="background:#e8dcc8"></div>
+        <div style="background:#c0392b"></div>
+        <div style="background:#7b1818"></div>
+      </div>
+      <div class="paleta-body">
+        <div class="paleta-name">Beige + Rojo</div>
+        <p class="paleta-desc">Calidez, elegancia y carácter. Ideal para restaurantes, tiendas artesanales, negocios con historia o cualquiera que quiera destacar con personalidad propia.</p>
+        <div class="paleta-swatches">
+          <div class="swatch" style="background:#f5f0e8;color:#333;border:1px solid #ddd">#F5F0E8</div>
+          <div class="swatch" style="background:#e8dcc8;color:#333">#E8DCC8</div>
+          <div class="swatch" style="background:#c0392b;color:#fff">#C0392B</div>
+          <div class="swatch" style="background:#7b1818;color:#fff">#7B1818</div>
+        </div>
+      </div>
+    </div>
+    <div class="paleta-card" data-reveal data-delay="3">
+      <div class="paleta-preview">
+        <div style="background:#111111"></div>
+        <div style="background:#1e1e1e"></div>
+        <div style="background:#e8621a"></div>
+        <div style="background:#ff7b2e"></div>
+      </div>
+      <div class="paleta-body">
+        <div class="paleta-name">Naranja + Negro</div>
+        <p class="paleta-desc">Energía, impacto y modernidad. Para negocios que quieren llamar la atención: deportes, entretenimiento, eventos o cualquiera que no quiera pasar desapercibido.</p>
+        <div class="paleta-swatches">
+          <div class="swatch" style="background:#111111;color:#fff">#111111</div>
+          <div class="swatch" style="background:#1e1e1e;color:#fff">#1E1E1E</div>
+          <div class="swatch" style="background:#e8621a;color:#fff">#E8621A</div>
+          <div class="swatch" style="background:#ff7b2e;color:#fff">#FF7B2E</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="contacto-inner">
+    <div class="s-tag">// Contacto</div>
+    <h2 class="s-title">¿Tu negocio necesita una web?</h2>
+    <p class="s-sub">Cuéntame qué tienes en mente. Primera consulta sin coste y sin compromiso — me desplazo a donde necesites por Granada y provincia.</p>
+    <div class="contact-cards" data-reveal>
+      <a href="tel:+34642805990" class="cc">
+        <div class="cc-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div>
+          <div class="cc-label">Teléfono / WhatsApp</div>
+          <div class="cc-val">642 80 59 90</div>
+        </div>
+      </a>
+      <a href="mailto:davidsantiagoybermudez@gmail.com" class="cc">
+        <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div>
+          <div class="cc-label">Email</div>
+          <div class="cc-val">davidsantiagoybermudez@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://github.com/davidodo123" target="_blank" class="cc">
+        <div class="cc-icon"><i class="fa-brands fa-github"></i></div>
+        <div>
+          <div class="cc-label">GitHub — más proyectos</div>
+          <div class="cc-val">davidodo123</div>
+        </div>
+      </a>
+      <div class="cc" style="cursor:default">
+        <div class="cc-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div>
+          <div class="cc-label">Zona de trabajo</div>
+          <div class="cc-val">Granada y provincia</div>
+        </div>
+      </div>
+    </div>
+    <a href="tel:+34642805990" class="big-cta" data-reveal data-delay="2">Llamar ahora — 642 80 59 90</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 David Santiago Bermúdez · Desarrollador Web · Granada</span>
+  <span>Hecho con HTML, CSS y ganas — <a href="https://github.com/davidodo123" target="_blank">github.com/davidodo123</a></span>
+</footer>
+
+<script src="script.js?v=4"></script>
+</body>
+</html>
