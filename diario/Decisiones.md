@@ -19,3 +19,6 @@ tags: [decisiones]
 
 ## Despliegue en Vercel
 *2026-10-20* — El portfolio se publicará en Vercel en lugar de Hostinger, como Eat-em y Run-In-Out.
+
+## Webs en GitHub Pages y fuera Hostinger
+*2026-10-20* — Las demos estáticas (TØP, Peru, Moi, Skylander) pasan a GitHub Pages. Petside y Learnio se quitan del portfolio porque necesitan PHP y base de datos. David también quita el título "¿Tu negocio necesita una web?" de Contacto (la web ya no se dirige a clientes). Pendiente: TalentHub depende del WordPress de Hostinger (`cms.damen.sbs`).

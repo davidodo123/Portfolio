@@ -566,7 +566,7 @@ section {
   padding: 0;
 }
 .proj-track {
-  height: calc(6 * 100vh);
+  height: calc(4 * 100vh);
 }
 .proj-sticky {
   position: sticky;
