@@ -25,3 +25,6 @@ tags: [decisiones]
 
 ## Portada: terminal y red neuronal
 *2026-10-20* — Se quita el cubo de Rubik. Probadas 3 opciones en vivo (terminal, apps flotando, red neuronal); a David le gustan la terminal y la red, así que se combinan: red de puntos animada de fondo (reacciona al ratón) y encima una terminal que teclea comandos de sus proyectos. Descartada: móviles flotando (las capturas actuales son de la pantalla de entrada). Oculta en tablet/móvil, quieta con "reducir movimiento".
+
+## Webs en mazo de cartas
+*2026-10-20* — Idea de David: las webs como tarjetas apiladas. La de delante se pasa al pulsarla (no el botón "Ver proyecto"), sale girando y va al fondo; las otras asoman por arriba. También flechas ← → (botones y teclado). Sustituye al scroll fijo de 4 pantallas. En móvil el texto va debajo de la imagen: arregla de paso que el nombre se pisara con la captura.

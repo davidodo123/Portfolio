@@ -192,39 +192,72 @@ document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(
   });
 })();
 
-// Sticky projects scroll stack
+// Mazo de webs: pulsar la tarjeta pasa a la siguiente
 (function() {
-  const track = document.getElementById('proj-track');
-  const slides = document.querySelectorAll('.proj-slide');
-  const bar = document.getElementById('proj-progress-bar');
+  const deck = document.getElementById('deck');
+  if (!deck) return;
+  const cards = Array.from(deck.querySelectorAll('.proj-slide'));
   const countEl = document.getElementById('proj-count');
-  if (!track || !slides.length) return;
+  const N = cards.length;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let order = cards.slice();   // order[0] = tarjeta de delante
+  let busy = false;
 
-  const N = slides.length;
-  let activeIdx = -1;
-
-  function update() {
-    const rect = track.getBoundingClientRect();
-    const scrolled = -rect.top;
-    const total = rect.height - window.innerHeight;
-    if (scrolled < 0 || scrolled > total) return;
-
-    const progress = scrolled / total;
-    const idx = Math.min(Math.floor(progress * N), N - 1);
-
-    if (idx !== activeIdx) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active', 'exit');
-        if (i === idx) slide.classList.add('active');
-        else if (i < idx) slide.classList.add('exit');
-      });
-      activeIdx = idx;
-      if (countEl) countEl.textContent = String(idx + 1).padStart(2,'0') + ' / ' + String(N).padStart(2,'0');
-    }
-
-    if (bar) bar.style.width = (progress * 100) + '%';
+  function layout() {
+    order.forEach((card, pos) => {
+      card.dataset.pos = pos;
+      card.setAttribute('aria-hidden', pos === 0 ? 'false' : 'true');
+      card.querySelectorAll('a').forEach(a => a.tabIndex = pos === 0 ? 0 : -1);
+    });
+    const front = Number(order[0].dataset.idx) + 1;
+    if (countEl) countEl.textContent = String(front).padStart(2, '0') + ' / ' + String(N).padStart(2, '0');
   }
 
-  window.addEventListener('scroll', update, { passive: true });
-  update();
+  function next() {
+    if (busy || N < 2) return;
+    const top = order[0];
+    if (reduceMotion) { order.push(order.shift()); layout(); return; }
+    busy = true;
+    top.classList.add('flying');
+    setTimeout(() => {
+      order.push(order.shift());
+      top.classList.remove('flying');
+      layout();
+      busy = false;
+    }, 420);
+  }
+
+  function prev() {
+    if (busy || N < 2) return;
+    const last = order[N - 1];
+    if (reduceMotion) { order.unshift(order.pop()); layout(); return; }
+    busy = true;
+    // La última carta aparece desde donde salen las cartas y vuelve delante
+    last.style.transition = 'none';
+    last.classList.add('flying');
+    void last.offsetWidth;
+    last.style.transition = '';
+    order.unshift(order.pop());
+    layout();
+    requestAnimationFrame(() => {
+      last.classList.remove('flying');
+      setTimeout(() => { busy = false; }, 450);
+    });
+  }
+
+  deck.addEventListener('click', (e) => {
+    if (e.target.closest('a')) return;           // el botón "Ver proyecto" abre la web
+    if (e.target.closest('.proj-slide') === order[0]) next();
+  });
+  deck.addEventListener('keydown', (e) => {
+    if (e.target.closest('a')) return;           // Enter en el enlace abre la web
+    if (e.key === 'ArrowRight' || e.key === 'Enter' || e.key === ' ') { e.preventDefault(); next(); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+  });
+  const btnNext = document.getElementById('deck-next');
+  const btnPrev = document.getElementById('deck-prev');
+  btnNext && btnNext.addEventListener('click', next);
+  btnPrev && btnPrev.addEventListener('click', prev);
+
+  layout();
 })();

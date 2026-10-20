@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>David Santiago — Desarrollador Web Granada</title>
-<link rel="stylesheet" href="styles.css?v=15"/>
+<link rel="stylesheet" href="styles.css?v=16"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 <body>
@@ -496,20 +496,17 @@
 
     <div class="s-header webs-head" data-reveal>
       <div class="s-tag">// Webs</div>
-      <h2 class="s-title">Webs para negocios</h2>
-      <p class="s-sub">Diseño a medida para restaurantes, turismo, deporte y más.</p>
     </div>
   </div>
 
   <!-- WEBS -->
-  <div class="proj-track" id="proj-track">
-    <div class="proj-sticky" id="proj-sticky">
+  <div class="deck-section">
 
-      <!-- label -->
-      <div class="proj-label">
-        <span class="proj-label-tag">// Webs</span>
-        <span class="proj-label-count" id="proj-count">01 / 04</span>
-      </div>
+    <div class="proj-label">
+      <span class="proj-label-count" id="proj-count">01 / 04</span>
+    </div>
+
+    <div class="deck" id="deck" tabindex="0" aria-label="Mazo de webs: pulsa una tarjeta o usa las flechas para pasar a la siguiente">
 
       <!-- 01 -->
       <div class="proj-slide" data-idx="0">
@@ -571,11 +568,12 @@
         </div>
       </div>
 
-      <!-- progress bar -->
-      <div class="proj-progress-wrap">
-        <div class="proj-progress-bar" id="proj-progress-bar"></div>
-      </div>
+    </div>
 
+    <div class="deck-controls">
+      <button class="deck-btn" id="deck-prev" aria-label="Web anterior"><i class="fa-solid fa-arrow-left"></i></button>
+      <span class="deck-hint">Pulsa la tarjeta para pasar a la siguiente</span>
+      <button class="deck-btn" id="deck-next" aria-label="Web siguiente"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
   </div>
 </section>
@@ -624,6 +622,6 @@
   <span>Hecho con HTML, CSS y ganas — <a href="https://github.com/davidodo123" target="_blank">github.com/davidodo123</a></span>
 </footer>
 
-<script src="script.js?v=9"></script>
+<script src="script.js?v=10"></script>
 </body>
 </html>
