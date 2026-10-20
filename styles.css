@@ -654,10 +654,10 @@ section {
   transition-duration: 0.4s;
 }
 .proj-slide-card {
-  width: min(56%, 900px);
+  width: min(70%, 1140px);
   aspect-ratio: 16 / 9;
-  max-height: 60vh;
-  margin-top: 40px;
+  max-height: 74vh;
+  margin-top: 32px;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
