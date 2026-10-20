@@ -255,7 +255,7 @@ document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(
       top.classList.remove('flying');
       layout();
       busy = false;
-    }, 420);
+    }, 230);
   }
 
   function prev() {
@@ -272,7 +272,7 @@ document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(
     layout();
     requestAnimationFrame(() => {
       last.classList.remove('flying');
-      setTimeout(() => { busy = false; }, 450);
+      setTimeout(() => { busy = false; }, 280);
     });
   }
 
