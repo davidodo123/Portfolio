@@ -655,7 +655,7 @@ section {
 }
 .proj-slide-card {
   width: calc(100% - 2 * var(--gutter));  /* mismo borde que el resto */
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 1;  /* mismo formato que las capturas: no recorta */
   max-height: 74vh;
   margin-top: 32px;
   border-radius: 10px;
@@ -677,7 +677,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: left top;
   display: block;
 }
 .proj-card-overlay {
