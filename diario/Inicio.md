@@ -6,7 +6,7 @@ tags: [inicio]
 Web personal de David Santiago Bermúdez: sobre mí, trayectoria, proyectos y contacto. Sirve para captar clientes que necesitan una web.
 
 - Repo: https://github.com/davidodo123/Portfolio (público)
-- Web: (pendiente — se despliega en Vercel)
+- Web: https://portfoliodsb.vercel.app (Vercel, proyecto `portfoliodsb`; se publica solo con cada push a `main`)
 
 ## Fase actual
 Fase 1 · Necesario
