@@ -17,6 +17,7 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Sobre mí: CV y datos personales debajo de la foto (quitaba el hueco vacío)
 - [x] Sobre mí: bloque "Ahora aprendiendo" (APIs en mis proyectos y automatización)
 - [x] Portada: cubo de Rubik sustituido por red neuronal de fondo + terminal que se escribe sola → [[Decisiones#Portada: terminal y red neuronal]]
+- [x] Ancho máximo del contenido (1280px centrado) para pantallas grandes
 - [ ] Cambiar las capturas de Eat-em y Run-In-Out por pantallas de dentro de la app (`eat-em.jpg`, `run-in-out.jpg`)
 - [ ] Revisar textos de Contacto ahora que no hay Servicios
 - [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
