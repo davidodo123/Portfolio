@@ -15,6 +15,7 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [-] ~~Rediseño para empresas (v0: fuentes, portada, Sobre mí)~~ — David prefiere el diseño anterior → [[Decisiones#Web orientada a empresas]]
 - [x] Paleta nueva: blanco roto + negro tinta + azul eléctrico → [[Decisiones#Paleta blanco roto y azul eléctrico]]
 - [x] Sobre mí: CV y datos personales debajo de la foto (quitaba el hueco vacío)
+- [x] Sobre mí: bloque "Ahora aprendiendo" (APIs en mis proyectos y automatización)
 - [ ] Cambiar las capturas de Eat-em y Run-In-Out por pantallas de dentro de la app (`eat-em.jpg`, `run-in-out.jpg`)
 - [ ] Revisar textos de Contacto ahora que no hay Servicios
 - [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
