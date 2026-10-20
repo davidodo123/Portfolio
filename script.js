@@ -7,7 +7,7 @@ window.addEventListener('scroll', () => {
     if (window.scrollY >= s.offsetTop - 120) current = s.id;
   });
   links.forEach(l => {
-    l.style.color = l.getAttribute('href') === '#'+current ? 'var(--orange)' : '';
+    l.style.color = l.getAttribute('href') === '#'+current ? 'var(--accent)' : '';
   });
 });
 
