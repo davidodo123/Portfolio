@@ -18,4 +18,4 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [ ] Revisar textos de Contacto ahora que no hay Servicios
 - [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
 - [ ] Desplegar en Vercel
-- [ ] Decidir qué hacer con las demos de las webs alojadas en Hostinger (mover a Vercel o mantener)
+- [/] Mover las demos de las webs a GitHub Pages: TØP, Peru, Moi y Skylander (estáticas). Petside y Learnio necesitan PHP + base de datos → no van en Pages
