@@ -5,7 +5,7 @@ tags: [inicio]
 
 Web personal de David Santiago Bermúdez: sobre mí, trayectoria, proyectos y contacto. Sirve para captar clientes que necesitan una web.
 
-- Repo: (pendiente — ahora mismo la carpeta no es repo git)
+- Repo: https://github.com/davidodo123/Portfolio (público)
 - Web: (pendiente — se despliega en Vercel)
 
 ## Fase actual

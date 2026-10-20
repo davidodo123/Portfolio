@@ -16,5 +16,6 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Paleta nueva: blanco roto + negro tinta + azul eléctrico → [[Decisiones#Paleta blanco roto y azul eléctrico]]
 - [ ] Cambiar las capturas de Eat-em y Run-In-Out por pantallas de dentro de la app (`eat-em.jpg`, `run-in-out.jpg`)
 - [ ] Revisar textos de Contacto ahora que no hay Servicios
-- [ ] Iniciar repo git público en github.com/davidodo123 y desplegar en Vercel
+- [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
+- [ ] Desplegar en Vercel
 - [ ] Decidir qué hacer con las demos de las webs alojadas en Hostinger (mover a Vercel o mantener)
