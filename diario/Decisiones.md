@@ -28,3 +28,6 @@ tags: [decisiones]
 
 ## Webs en mazo de cartas
 *2026-10-20* — Idea de David: las webs como tarjetas apiladas. La de delante se pasa al pulsarla (no el botón "Ver proyecto"), sale girando y va al fondo; las otras asoman por arriba. También flechas ← → (botones y teclado). Sustituye al scroll fijo de 4 pantallas. En móvil el texto va debajo de la imagen: arregla de paso que el nombre se pisara con la captura.
+
+## Optimización de rendimiento
+*2026-10-20* — La web cargaba ~9,9 MB al entrar (capturas PNG de hasta 5,6 MB). Se pasan a WebP a 1600px (las de las webs) y 600px (las de las apps): ~0,4 MB al entrar y ~0,8 MB tras recorrer toda la página. Además: imágenes con `loading="lazy"` y tamaño fijo, iconos de Font Awesome sin bloquear el pintado, red neuronal y terminal en pausa cuando la portada no se ve, scroll y ratón limitados a un cálculo por frame, y el mazo oscurece con una capa en vez de `filter`. Los PNG originales siguen en la carpeta pero la web ya no los usa.

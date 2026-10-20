@@ -4,14 +4,17 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>David Santiago — Desarrollador Web Granada</title>
-<link rel="stylesheet" href="styles.css?v=16"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="styles.css?v=17"/>
+<!-- Iconos sin bloquear el primer pintado -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/></noscript>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-logo"><img src="dsb-blanco-Photoroom.png" alt="DSB" class="nav-logo-img"/></div>
+  <div class="nav-logo"><img src="dsb-logo.webp" alt="DSB" class="nav-logo-img" width="240" height="126"/></div>
   <ul class="nav-links">
     <li><a href="#sobre">Sobre mí</a></li>
     <li><a href="#trayectoria">Trayectoria</a></li>
@@ -67,7 +70,7 @@
 <section id="sobre">
   <div class="sobre-grid">
     <div class="sobre-photo-wrap" data-reveal>
-      <img src="https://avatars.githubusercontent.com/u/187556243?v=4"
+      <img src="https://avatars.githubusercontent.com/u/187556243?v=4" width="460" height="460" loading="lazy" decoding="async"
            alt="David Santiago Bermúdez"
            class="sobre-photo"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
@@ -456,7 +459,7 @@
         </div>
       </div>
       <div class="app-visual" data-reveal data-delay="2">
-        <div class="phone"><img src="eat-em.jpg" alt="Pantalla de inicio de Eat-em"/></div>
+        <div class="phone"><img src="eat-em.webp" alt="Pantalla de inicio de Eat-em" width="600" height="1298" loading="lazy" decoding="async"/></div>
       </div>
     </article>
 
@@ -490,12 +493,14 @@
         </div>
       </div>
       <div class="app-visual" data-reveal data-delay="2">
-        <div class="phone"><img src="run-in-out.jpg" alt="Pantalla de entrada de Run-In-Out"/></div>
+        <div class="phone"><img src="run-in-out.webp" alt="Pantalla de entrada de Run-In-Out" width="600" height="1298" loading="lazy" decoding="async"/></div>
       </div>
     </article>
 
     <div class="s-header webs-head" data-reveal>
       <div class="s-tag">// Webs</div>
+      <h2 class="s-title">Webs</h2>
+      <p class="s-sub">Diseño a medida para restaurantes, turismo, deporte y más.</p>
     </div>
   </div>
 
@@ -511,7 +516,7 @@
       <!-- 01 -->
       <div class="proj-slide" data-idx="0">
         <div class="proj-slide-card">
-          <img src="top.png" alt="Portfolio TØP"/>
+          <img src="top.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Portfolio TØP"/>
           <div class="proj-card-overlay">
             <div class="proj-card-top"><span class="proj-card-num">01</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
             <div class="proj-card-bottom">
@@ -526,7 +531,7 @@
       <!-- 02 -->
       <div class="proj-slide" data-idx="1">
         <div class="proj-slide-card">
-          <img src="peru.png" alt="Peru"/>
+          <img src="peru.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Peru"/>
           <div class="proj-card-overlay">
             <div class="proj-card-top"><span class="proj-card-num">02</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
             <div class="proj-card-bottom">
@@ -541,7 +546,7 @@
       <!-- 03 -->
       <div class="proj-slide" data-idx="2">
         <div class="proj-slide-card">
-          <img src="Moi.png" alt="Moi"/>
+          <img src="moi.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Moi"/>
           <div class="proj-card-overlay">
             <div class="proj-card-top"><span class="proj-card-num">03</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
             <div class="proj-card-bottom">
@@ -556,7 +561,7 @@
       <!-- 04 -->
       <div class="proj-slide" data-idx="3">
         <div class="proj-slide-card">
-          <img src="Skylander.png" alt="Skylander"/>
+          <img src="skylander.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Skylander"/>
           <div class="proj-card-overlay">
             <div class="proj-card-top"><span class="proj-card-num">04</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
             <div class="proj-card-bottom">
@@ -622,6 +627,6 @@
   <span>Hecho con HTML, CSS y ganas — <a href="https://github.com/davidodo123" target="_blank">github.com/davidodo123</a></span>
 </footer>
 
-<script src="script.js?v=10"></script>
+<script src="script.js?v=11"></script>
 </body>
 </html>

@@ -1,15 +1,24 @@
-// Smooth active nav on scroll
-const sections = document.querySelectorAll('section[id]');
+// Smooth active nav on scroll (posiciones en caché y como mucho una vez por frame)
+const sections = Array.from(document.querySelectorAll('section[id]'));
 const links = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
+let sectionTops = [], navTicking = false, navCurrent = null;
+function measureSections() { sectionTops = sections.map(s => s.offsetTop); }
+function updateNav() {
+  navTicking = false;
   let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
-  });
+  sectionTops.forEach((top, i) => { if (window.scrollY >= top - 120) current = sections[i].id; });
+  if (current === navCurrent) return;
+  navCurrent = current;
   links.forEach(l => {
     l.style.color = l.getAttribute('href') === '#'+current ? 'var(--accent)' : '';
   });
-});
+}
+window.addEventListener('scroll', () => {
+  if (!navTicking) { navTicking = true; requestAnimationFrame(updateNav); }
+}, { passive: true });
+window.addEventListener('resize', measureSections);
+window.addEventListener('load', () => { measureSections(); updateNav(); });
+measureSections();
 
 // Live clock — Granada (Europe/Madrid)
 function updateClock() {
@@ -31,12 +40,30 @@ setInterval(updateClock, 1000);
   if (!visual || !heroEl) return;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Ratón → variables --mx / --my (-0.5 … 0.5)
+  // Solo se anima mientras la portada está en pantalla y la pestaña visible
+  let heroOnScreen = true;
+  const isActive = () => heroOnScreen && !document.hidden;
+  new IntersectionObserver(([entry]) => {
+    heroOnScreen = entry.isIntersecting;
+    if (isActive()) resumeNet();
+  }).observe(heroEl);
+  document.addEventListener('visibilitychange', () => { if (isActive()) resumeNet(); });
+
+  // Ratón → variables --mx / --my (-0.5 … 0.5), una vez por frame
+  let pointer = null, pointerTicking = false;
   heroEl.addEventListener('mousemove', (e) => {
-    const r = heroEl.getBoundingClientRect();
-    visual.style.setProperty('--mx', ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
-    visual.style.setProperty('--my', ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
-  });
+    pointer = e;
+    if (pointerTicking) return;
+    pointerTicking = true;
+    requestAnimationFrame(() => {
+      pointerTicking = false;
+      const r = heroEl.getBoundingClientRect();
+      visual.style.setProperty('--mx', ((pointer.clientX - r.left) / r.width - 0.5).toFixed(3));
+      visual.style.setProperty('--my', ((pointer.clientY - r.top) / r.height - 0.5).toFixed(3));
+      const c = canvas && canvas.getBoundingClientRect();
+      if (c) mouse = { x: pointer.clientX - c.left, y: pointer.clientY - c.top };
+    });
+  }, { passive: true });
   heroEl.addEventListener('mouseleave', () => {
     visual.style.setProperty('--mx', 0);
     visual.style.setProperty('--my', 0);
@@ -61,7 +88,10 @@ setInterval(updateClock, 1000);
     term.innerHTML = html + (extra || '') + '<span class="term-cursor"></span>';
   }
   async function runTerminal() {
-    const wait = (ms) => new Promise(r => setTimeout(r, ms));
+    const wait = async (ms) => {
+      await new Promise(r => setTimeout(r, ms));
+      while (!isActive()) await new Promise(r => setTimeout(r, 400));
+    };
     while (true) {
       html = '';
       for (const step of script) {
@@ -109,14 +139,10 @@ setInterval(updateClock, 1000);
       }));
     }
   }
-  heroEl.addEventListener('mousemove', (e) => {
-    const r = canvas.getBoundingClientRect();
-    mouse = { x: e.clientX - r.left, y: e.clientY - r.top };
-  });
   heroEl.addEventListener('mouseleave', () => { mouse = null; });
+  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2b3bff';
   function drawNet() {
     ctx.clearRect(0, 0, W, H);
-    const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2b3bff';
     for (const n of nodes) {
       if (!reduceMotion) {
         n.x += n.vx; n.y += n.vy;
@@ -151,7 +177,12 @@ setInterval(updateClock, 1000);
       ctx.fillStyle = n.r > 3.8 ? accent : '#0e0e12';
       ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
     }
-    if (netRunning && !reduceMotion) requestAnimationFrame(drawNet);
+    if (netRunning && !reduceMotion && isActive()) requestAnimationFrame(drawNet);
+    else netPaused = true;
+  }
+  let netPaused = false;
+  function resumeNet() {
+    if (netRunning && netPaused && !reduceMotion) { netPaused = false; requestAnimationFrame(drawNet); }
   }
   function startNet() {
     if (!canvas || netRunning) return;

@@ -19,6 +19,7 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Portada: cubo de Rubik sustituido por red neuronal de fondo + terminal que se escribe sola → [[Decisiones#Portada: terminal y red neuronal]]
 - [x] Ancho máximo del contenido (1280px centrado) para pantallas grandes
 - [x] Webs como mazo de cartas: pulsar la tarjeta pasa a la siguiente con animación; las demás asoman por detrás. Adiós al scroll de 4 pantallas → [[Decisiones#Webs en mazo de cartas]]
+- [x] Rendimiento: imágenes a WebP (9,9 MB → 0,4 MB al entrar), carga diferida, animaciones en pausa fuera de pantalla
 - [ ] Cambiar las capturas de Eat-em y Run-In-Out por pantallas de dentro de la app (`eat-em.jpg`, `run-in-out.jpg`)
 - [ ] Revisar textos de Contacto ahora que no hay Servicios
 - [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
