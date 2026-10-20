@@ -22,3 +22,6 @@ tags: [decisiones]
 
 ## Webs en GitHub Pages y fuera Hostinger
 *2026-10-20* — Las demos estáticas (TØP, Peru, Moi, Skylander) pasan a GitHub Pages. Petside y Learnio se quitan del portfolio porque necesitan PHP y base de datos. David también quita el título "¿Tu negocio necesita una web?" de Contacto (la web ya no se dirige a clientes). Pendiente: TalentHub depende del WordPress de Hostinger (`cms.damen.sbs`).
+
+## Portada: terminal y red neuronal
+*2026-10-20* — Se quita el cubo de Rubik. Probadas 3 opciones en vivo (terminal, apps flotando, red neuronal); a David le gustan la terminal y la red, así que se combinan: red de puntos animada de fondo (reacciona al ratón) y encima una terminal que teclea comandos de sus proyectos. Descartada: móviles flotando (las capturas actuales son de la pantalla de entrada). Oculta en tablet/móvil, quieta con "reducir movimiento".

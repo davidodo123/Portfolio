@@ -24,43 +24,145 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 1000);
 
-// Cube 3D — JS driven (auto-rotate + mouse follow)
+// Hero visual — red neuronal de fondo + terminal
 (function() {
-  const cubeEl = document.getElementById('hero-cube');
+  const visual = document.getElementById('hero-visual');
   const heroEl = document.getElementById('hero');
-  if (!cubeEl || !heroEl) return;
+  if (!visual || !heroEl) return;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let rotX = 22, rotY = 0;
-  let targetX = 22, targetY = 0;
-  let isHovering = false;
-
-  function lerp(a, b, t) { return a + (b - a) * t; }
-
+  // Ratón → variables --mx / --my (-0.5 … 0.5)
   heroEl.addEventListener('mousemove', (e) => {
-    isHovering = true;
     const r = heroEl.getBoundingClientRect();
-    const nx = (e.clientX - r.left) / r.width - 0.5;
-    const ny = (e.clientY - r.top)  / r.height - 0.5;
-    targetX = 22 - ny * 40;
-    targetY = rotY + nx * 70;
+    visual.style.setProperty('--mx', ((e.clientX - r.left) / r.width - 0.5).toFixed(3));
+    visual.style.setProperty('--my', ((e.clientY - r.top) / r.height - 0.5).toFixed(3));
   });
-  heroEl.addEventListener('mouseleave', () => { isHovering = false; });
+  heroEl.addEventListener('mouseleave', () => {
+    visual.style.setProperty('--mx', 0);
+    visual.style.setProperty('--my', 0);
+  });
 
-  cubeEl.style.animation = 'none';
-
-  function tick() {
-    if (isHovering) {
-      rotX = lerp(rotX, targetX, 0.07);
-      rotY = lerp(rotY, targetY, 0.07);
-    } else {
-      rotY += 0.25;
-      rotX = lerp(rotX, 22, 0.03);
-      targetY = rotY;
-    }
-    cubeEl.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg)`;
-    requestAnimationFrame(tick);
+  // Terminal que se escribe sola
+  const term = document.getElementById('term-body');
+  const script = [
+    { cmd: 'git push origin main' },
+    { out: 'Vercel: desplegando eat-em…', cls: 't-dim' },
+    { out: '✓ Listo en eat-em.vercel.app', cls: 't-ok' },
+    { cmd: 'npm run scraper' },
+    { out: '✓ Precios de 4 supermercados al día', cls: 't-ok' },
+    { cmd: 'npx cap run android' },
+    { out: '✓ Run-In-Out instalada en el móvil', cls: 't-ok' },
+    { cmd: 'ia --plan "semana de carrera"' },
+    { out: '✓ Plan ajustado a tu carga y recuperación', cls: 't-ok' },
+  ];
+  const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+  let html = '';
+  function render(extra) {
+    term.innerHTML = html + (extra || '') + '<span class="term-cursor"></span>';
   }
-  tick();
+  async function runTerminal() {
+    const wait = (ms) => new Promise(r => setTimeout(r, ms));
+    while (true) {
+      html = '';
+      for (const step of script) {
+        if (step.cmd) {
+          const pre = '<span class="t-prompt">$</span> ';
+          for (let i = 1; i <= step.cmd.length; i++) {
+            render(pre + esc(step.cmd.slice(0, i)));
+            await wait(38 + Math.random() * 40);
+          }
+          html += pre + esc(step.cmd) + '\n';
+          render();
+          await wait(350);
+        } else {
+          html += '<span class="' + step.cls + '">' + esc(step.out) + '</span>\n';
+          render();
+          await wait(450);
+        }
+      }
+      await wait(3500);
+    }
+  }
+  if (term) {
+    if (reduceMotion) {
+      html = script.map(s => s.cmd ? '<span class="t-prompt">$</span> ' + esc(s.cmd) : '<span class="' + s.cls + '">' + esc(s.out) + '</span>').join('\n') + '\n';
+      render();
+    } else {
+      runTerminal();
+    }
+  }
+
+  // Red neuronal en canvas (detrás de la terminal)
+  const canvas = document.getElementById('net-canvas');
+  const ctx = canvas && canvas.getContext('2d');
+  let nodes = [], W = 0, H = 0, mouse = null, netRunning = false;
+  function sizeCanvas() {
+    const dpr = window.devicePixelRatio || 1;
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (!nodes.length) {
+      nodes = Array.from({ length: 64 }, () => ({
+        x: Math.random() * W, y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.35, vy: (Math.random() - 0.5) * 0.35,
+        r: 2 + Math.random() * 2.5,
+      }));
+    }
+  }
+  heroEl.addEventListener('mousemove', (e) => {
+    const r = canvas.getBoundingClientRect();
+    mouse = { x: e.clientX - r.left, y: e.clientY - r.top };
+  });
+  heroEl.addEventListener('mouseleave', () => { mouse = null; });
+  function drawNet() {
+    ctx.clearRect(0, 0, W, H);
+    const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#2b3bff';
+    for (const n of nodes) {
+      if (!reduceMotion) {
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < 0 || n.x > W) n.vx *= -1;
+        if (n.y < 0 || n.y > H) n.vy *= -1;
+        if (mouse) {
+          const dx = mouse.x - n.x, dy = mouse.y - n.y, d = Math.hypot(dx, dy);
+          if (d < 140) { n.x += dx * 0.012; n.y += dy * 0.012; }
+        }
+      }
+    }
+    ctx.strokeStyle = accent;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < 110) {
+          ctx.globalAlpha = (1 - d / 110) * 0.45;
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+        }
+      }
+      if (mouse) {
+        const a = nodes[i], d = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+        if (d < 160) {
+          ctx.globalAlpha = (1 - d / 160) * 0.8;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+        }
+      }
+    }
+    ctx.globalAlpha = 1;
+    for (const n of nodes) {
+      ctx.fillStyle = n.r > 3.8 ? accent : '#0e0e12';
+      ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
+    }
+    if (netRunning && !reduceMotion) requestAnimationFrame(drawNet);
+  }
+  function startNet() {
+    if (!canvas || netRunning) return;
+    netRunning = true;
+    sizeCanvas();
+    drawNet();
+  }
+  window.addEventListener('resize', () => { if (netRunning) sizeCanvas(); });
+
+  // Solo se anima si la portada está visible (ahorra batería en móvil, donde se oculta)
+  if (canvas && getComputedStyle(visual).display !== 'none') startNet();
 })();
 
 // Scroll reveal
