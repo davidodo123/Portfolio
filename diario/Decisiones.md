@@ -31,3 +31,6 @@ tags: [decisiones]
 
 ## Optimización de rendimiento
 *2026-10-20* — La web cargaba ~9,9 MB al entrar (capturas PNG de hasta 5,6 MB). Se pasan a WebP a 1600px (las de las webs) y 600px (las de las apps): ~0,4 MB al entrar y ~0,8 MB tras recorrer toda la página. Además: imágenes con `loading="lazy"` y tamaño fijo, iconos de Font Awesome sin bloquear el pintado, red neuronal y terminal en pausa cuando la portada no se ve, scroll y ratón limitados a un cálculo por frame, y el mazo oscurece con una capa en vez de `filter`. Los PNG originales siguen en la carpeta pero la web ya no los usa.
+
+## Run-In-Out con sus colores
+*2026-10-26* — La app cambió a negro y lima (estilo Volt). Su ficha del portfolio deja el naranja y pasa a fondo negro con acento lima (clase `app-volt`, solo redefine variables dentro de la tarjeta). Alternativa: solo cambiar el acento a lima sobre el fondo claro — descartada porque el lima no se lee sobre blanco roto.

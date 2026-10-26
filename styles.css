@@ -398,6 +398,20 @@ section {
     radial-gradient(ellipse 60% 70% at 15% 50%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
     var(--bg2);
 }
+/* Run-In-Out con sus colores: negro y lima, como la app */
+.app-volt {
+  --accent: #d4ff3a;
+  --accent2: #c2f01f;
+  --bg2: #0a0a0a;
+  --card: #141414;
+  --border: #2a2a2a;
+  --ink: #ffffff;
+  --text: #ececec;
+  --text2: #a9a9a9;
+  --gray: #8c8c8c;
+  border-color: #1f1f1f;
+}
+.app-volt .app-btn:not(.app-btn-ghost) { color: #000; }
 .app-feature-rev .app-info { order: 2; }
 .app-feature-rev .app-visual { order: 1; }
 .app-head {

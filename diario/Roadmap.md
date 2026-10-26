@@ -22,6 +22,7 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Rendimiento: imágenes a WebP (9,9 MB → 0,4 MB al entrar), carga diferida, animaciones en pausa fuera de pantalla
 - [ ] Cambiar las capturas de Eat-em y Run-In-Out por pantallas de dentro de la app (`eat-em.jpg`, `run-in-out.jpg`)
 - [ ] Revisar textos de Contacto ahora que no hay Servicios
+- [x] Run-In-Out con sus colores nuevos (negro y lima, como la app): tarjeta oscura, icono y captura de entrada nueva → [[Decisiones#Run-In-Out con sus colores]]
 - [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
 - [x] Desplegar en Vercel → https://portfoliodsb.vercel.app
 - [x] Demos de las webs en GitHub Pages: TØP, Peru, Moi y Skylander. Petside y Learnio quitadas del portfolio (necesitan PHP + BD)
