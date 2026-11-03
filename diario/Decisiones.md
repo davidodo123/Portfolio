@@ -40,3 +40,6 @@ tags: [decisiones]
 
 ## Apps con el mismo fondo claro
 *2026-11-03* — A David no le gusta que Eat-em vaya en claro y Run-In-Out en negro. Elegido: las dos con el fondo claro de la web; Run-In-Out lleva de acento un verde oliva oscuro (`#5a6e00`), porque el lima no se lee sobre claro, y el lima queda en el icono y la captura. Se quita la clase `app-volt`. Descartadas: las dos en negro, y las dos con el azul de la web como acento. Sustituye a [[Decisiones#Run-In-Out con sus colores]].
+
+## Precios-ML en el portfolio
+*2026-11-03* — Primer proyecto de machine learning, en su propio repo (`Precios-ML`). Con solo 19 días de histórico no tiene sentido predecir el precio a 7 días, así que se clasifica si cambiará en 3 días (ROC-AUC 0,65 frente a 0,53 de una regla simple). Va como tercera ficha tras las apps, con un gráfico de lift propio en vez de móvil; la sección pasa a llamarse "Proyectos con IA". Se añaden pandas y scikit-learn a las habilidades porque ahora sí se usan.

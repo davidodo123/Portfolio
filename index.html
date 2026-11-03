@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>David Santiago — Desarrollador · IA aplicada y datos · Granada</title>
-<link rel="stylesheet" href="styles.css?v=21"/>
+<link rel="stylesheet" href="styles.css?v=22"/>
 <!-- Iconos sin bloquear el primer pintado -->
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"/>
@@ -134,6 +134,8 @@
         <span class="skill-pill">PHP / AJAX</span>
         <span class="skill-pill">SQL</span>
         <span class="skill-pill">Python</span>
+        <span class="skill-pill">pandas</span>
+        <span class="skill-pill">scikit-learn</span>
         <span class="skill-pill">Cron / CLI</span>
         <span class="skill-pill">Diseño web</span>
         <span class="skill-pill">Git & GitHub</span>
@@ -147,7 +149,7 @@
             <div class="learning-icon"><i class="fa-solid fa-chart-line"></i></div>
             <div>
               <h3>Machine learning</h3>
-              <p>Entrenar y evaluar modelos con Python en el curso de especialización y el máster. Siguiente paso: predecir precios con los datos reales de Eat-em.</p>
+              <p>Entrenar y evaluar modelos con Python en el curso de especialización y el máster. Primer proyecto: Precios-ML, con los datos reales de Eat-em.</p>
             </div>
           </div>
           <div class="learning-item">
@@ -185,8 +187,8 @@
       <span class="tray-stat-label">Tecnologías</span>
     </div>
     <div class="tray-stat">
-      <span class="tray-stat-num">2</span>
-      <span class="tray-stat-label">Apps con IA en producción</span>
+      <span class="tray-stat-num">3</span>
+      <span class="tray-stat-label">Proyectos con IA y ML</span>
     </div>
   </div>
 
@@ -426,8 +428,8 @@
   <div class="apps-wrap">
     <div class="s-header" data-reveal>
       <div class="s-tag">// Proyectos</div>
-      <h2 class="s-title">Apps completas</h2>
-      <p class="s-sub">Mis dos proyectos más grandes: apps reales con cuentas de usuario, base de datos, IA con salvaguardas y despliegue continuo.</p>
+      <h2 class="s-title">Proyectos con IA</h2>
+      <p class="s-sub">Dos apps reales con cuentas de usuario, base de datos, IA con salvaguardas y despliegue continuo, y un modelo de machine learning entrenado con sus datos.</p>
     </div>
 
     <!-- Eat-em -->
@@ -516,6 +518,42 @@
       </div>
       <div class="app-visual" data-reveal data-delay="2">
         <div class="phone"><img src="run-in-out.webp" alt="Pantalla de entrada de Run-In-Out" width="600" height="1298" loading="lazy" decoding="async"/></div>
+      </div>
+    </article>
+
+    <!-- Precios-ML -->
+    <article class="app-feature">
+      <div class="app-info" data-reveal>
+        <div class="app-head">
+          <span class="app-kicker">Proyecto 03 · Machine learning</span>
+        </div>
+        <h3 class="app-name">Precios-ML</h3>
+        <p class="app-tagline">¿Qué productos van a cambiar de precio esta semana?</p>
+        <p class="app-desc">Modelo entrenado con el histórico real que recogen los scrapers de Eat-em: predice si el precio de un producto cambiará en los próximos 3 días.</p>
+        <ul class="app-features">
+          <li><i class="fa-solid fa-database"></i><span><strong>Datos propios</strong>: 1 millón de precios de ~86.000 productos de Carrefour, Gadis y Ahorramás, descargados de Supabase</span></li>
+          <li><i class="fa-solid fa-scale-balanced"></i><span><strong>Planteamiento honesto</strong>: solo el 1 % de los precios cambia de un día a otro, así que se clasifica el cambio en vez de predecir el precio</span></li>
+          <li><i class="fa-solid fa-clock-rotate-left"></i><span><strong>Separación temporal</strong>: entreno con cortes del 22 al 26 de octubre y prueba con los del 30 y 31, sin ver el futuro</span></li>
+          <li><i class="fa-solid fa-chart-column"></i><span><strong>Comparado con líneas base</strong>: azar y reglas simples, con ROC-AUC, PR-AUC e importancia por permutación</span></li>
+        </ul>
+        <div class="app-stats">
+          <div><span class="app-stat-num">0,65</span><span class="app-stat-label">ROC-AUC (regla simple: 0,53)</span></div>
+          <div><span class="app-stat-num">2,9×</span><span class="app-stat-label">aciertos en el top 1.000 frente a la media</span></div>
+          <div><span class="app-stat-num">1 M</span><span class="app-stat-label">precios reales</span></div>
+        </div>
+        <div class="app-stack">
+          <span>Python</span><span>pandas</span><span>scikit-learn</span><span>Gradient boosting</span><span>matplotlib</span><span>Jupyter</span><span>Supabase</span>
+        </div>
+        <div class="app-links">
+          <a href="https://github.com/davidodo123/Precios-ML/blob/main/precios.ipynb" target="_blank" class="app-btn">Ver el notebook <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/davidodo123/Precios-ML" target="_blank" class="app-btn app-btn-ghost"><i class="fa-brands fa-github"></i> Código</a>
+        </div>
+      </div>
+      <div class="app-visual" data-reveal data-delay="2">
+        <figure class="ml-chart">
+          <img src="precios-ml.png" alt="Gráfico: los productos del primer decil del modelo cambian de precio 1,8 veces más que la media y los del último 0,4 veces" width="1200" height="780" loading="lazy" decoding="async"/>
+          <figcaption>Cambios de precio por decil del modelo, en la semana de prueba</figcaption>
+        </figure>
       </div>
     </article>
 

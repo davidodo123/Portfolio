@@ -398,6 +398,24 @@ section {
     radial-gradient(ellipse 60% 70% at 15% 50%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
     var(--bg2);
 }
+.ml-chart {
+  margin: 0;
+  padding: 20px 20px 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.ml-chart img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ml-chart figcaption {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: var(--gray);
+  text-align: center;
+}
 .app-feature-rev .app-info { order: 2; }
 .app-feature-rev .app-visual { order: 1; }
 .app-head {

@@ -42,5 +42,5 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Desguace Suspiro: "procesos de automatización con IA" junto a OpenCode, sin cifra (decisión de David)
 - [x] Eat-em y Run-In-Out con el mismo fondo claro; Run-In-Out con acento oliva → [[Decisiones#Apps con el mismo fondo claro]]
 - [ ] Proyecto ML: RAG sobre CIMA (AEMPS) con repo, demo y métricas
-- [ ] Proyecto ML: forecasting de precios con los datos de Eat-em (~80.000 productos, 5 cadenas), notebook y métricas
+- [/] Proyecto ML: Precios-ML (¿cambiará el precio en 3 días?) con los datos de Eat-em; ficha puesta, falta subir el repo a GitHub → [[Decisiones#Precios-ML en el portfolio]]
 - [ ] Versión en inglés del portfolio
