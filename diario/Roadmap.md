@@ -26,3 +26,19 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
 - [x] Desplegar en Vercel → https://portfoliodsb.vercel.app
 - [x] Demos de las webs en GitHub Pages: TØP, Peru, Moi y Skylander. Petside y Learnio quitadas del portfolio (necesitan PHP + BD)
+
+## Fase 2 · Reposicionar hacia IA y datos
+- [x] Título "Desarrollador · IA aplicada y datos · Granada" (portada, `<title>`, pie) → [[Decisiones#Portfolio orientado a puestos de IA]]
+- [x] "Disponible para incorporación" en lugar de "Disponible para proyectos"; fuera "Primera consulta siempre sin coste"
+- [x] Coherencia: Next.js y React en lugar de Vue; carnet B (no B1); terminal con 5 supermercados
+- [x] Eat-em y Run-In-Out: bloque "Cómo funciona la IA" (modelo, prompt, RAG, salvaguardas, evaluación, coste por petición)
+- [x] Etiquetas concretas: pgvector, RAG, Structured Outputs, OpenRouter, evaluación de LLM (Python se queda tal cual hasta que haya proyectos con pandas, scikit-learn, FastAPI o Docker)
+- [x] OpenCode el primero en Desguace Suspiro
+- [x] Quitar curso Valeo y nota media 6,4
+- [x] Webs al final como "Webs de front-end" y sin TØP (nombre de un grupo real)
+- [ ] Inglés: aclarar nivel real (el CV y el certificado Trinity dicen B1; la web dice B2)
+- [ ] Nombre exacto del certificado de IA de Google
+- [ ] Resultado medible de OpenCode en Desguace Suspiro
+- [ ] Proyecto ML: RAG sobre CIMA (AEMPS) con repo, demo y métricas
+- [ ] Proyecto ML: forecasting de precios con los datos de Eat-em (~80.000 productos, 5 cadenas), notebook y métricas
+- [ ] Versión en inglés del portfolio

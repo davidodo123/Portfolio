@@ -76,7 +76,7 @@ setInterval(updateClock, 1000);
     { out: 'Vercel: desplegando eat-em…', cls: 't-dim' },
     { out: '✓ Listo en eat-em.vercel.app', cls: 't-ok' },
     { cmd: 'npm run scraper' },
-    { out: '✓ Precios de 4 supermercados al día', cls: 't-ok' },
+    { out: '✓ Precios de 5 supermercados al día', cls: 't-ok' },
     { cmd: 'npx cap run android' },
     { out: '✓ Run-In-Out instalada en el móvil', cls: 't-ok' },
     { cmd: 'ia --plan "semana de carrera"' },

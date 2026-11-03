@@ -34,3 +34,6 @@ tags: [decisiones]
 
 ## Run-In-Out con sus colores
 *2026-10-26* — La app cambió a negro y lima (estilo Volt). Su ficha del portfolio deja el naranja y pasa a fondo negro con acento lima (clase `app-volt`, solo redefine variables dentro de la tarjeta). Alternativa: solo cambiar el acento a lima sobre el fondo claro — descartada porque el lima no se lee sobre blanco roto.
+
+## Portfolio orientado a puestos de IA
+*2026-11-03* — David trae una revisión del portfolio para buscar contrato en puestos de IA y datos. Se cambia el título a "Desarrollador · IA aplicada y datos · Granada", se quitan los mensajes de freelance, se explica la IA de Eat-em y Run-In-Out con datos sacados de su código (modelos de OpenRouter, Structured Outputs, RAG, prefiltro y topes en código, evaluación, 0 € por petición), se quitan Valeo y la media 6,4 y las webs pasan a "Webs de front-end" sin TØP. Alternativa descartada para las webs: dejar solo un enlace a GitHub (el mazo ya está al final y funciona). No se añaden a la web el RAG de CIMA ni el forecasting hasta que existan: no hay código de ninguno. Tampoco se desglosa Python en pandas, scikit-learn, FastAPI o Docker porque ninguno aparece aún en los proyectos.
