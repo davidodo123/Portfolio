@@ -36,9 +36,9 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] OpenCode el primero en Desguace Suspiro
 - [x] Quitar curso Valeo y nota media 6,4
 - [x] Webs al final como "Webs de front-end" y sin TØP (nombre de un grupo real)
-- [ ] Inglés: aclarar nivel real (el CV y el certificado Trinity dicen B1; la web dice B2)
-- [ ] Nombre exacto del certificado de IA de Google
-- [ ] Resultado medible de OpenCode en Desguace Suspiro
+- [x] Inglés: B2 confirmado por David (el CV y el PDF Trinity están en B1: actualizarlos)
+- [x] Certificado de Google con su nombre: Google AI Professional Certificate (Coursera)
+- [/] Desguace Suspiro: añadidos scraping de datos de coches y automatización del depósito; falta una cifra (horas ahorradas, coches procesados…)
 - [ ] Proyecto ML: RAG sobre CIMA (AEMPS) con repo, demo y métricas
 - [ ] Proyecto ML: forecasting de precios con los datos de Eat-em (~80.000 productos, 5 cadenas), notebook y métricas
 - [ ] Versión en inglés del portfolio
