@@ -34,6 +34,7 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Eat-em y Run-In-Out: bloque "Cómo funciona la IA" (modelo, prompt, RAG, salvaguardas, evaluación, coste por petición)
 - [x] Etiquetas concretas: pgvector, RAG, Structured Outputs, OpenRouter, evaluación de LLM (Python se queda tal cual hasta que haya proyectos con pandas, scikit-learn, FastAPI o Docker)
 - [x] OpenCode el primero en Desguace Suspiro
+- [x] Nombre del curso: Instalación, Despliegue y Explotación de Sistemas de IA; "Ahora aprendiendo" con machine learning en lugar de APIs
 - [x] Quitar curso Valeo y nota media 6,4
 - [x] Webs al final como "Webs de front-end" y sin TØP (nombre de un grupo real)
 - [x] Inglés: B2 confirmado por David; MiCV.pdf actualizado
