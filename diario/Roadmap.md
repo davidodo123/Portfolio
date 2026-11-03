@@ -43,4 +43,5 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Eat-em y Run-In-Out con el mismo fondo claro; Run-In-Out con acento oliva → [[Decisiones#Apps con el mismo fondo claro]]
 - [ ] Proyecto ML: RAG sobre CIMA (AEMPS) con repo, demo y métricas
 - [x] Proyecto ML: Precios-ML (¿cambiará el precio en 3 días?) con los datos de Eat-em, repo público y ficha → [[Decisiones#Precios-ML en el portfolio]]
-- [ ] Versión en inglés del portfolio
+- [x] Versión en inglés del portfolio (`en.html`, botón ES/EN en el menú) → [[Decisiones#Versión en inglés]]
+- [ ] CV en inglés actualizado (el de 2025 dice B1 y no tiene Desguace Suspiro); hasta entonces en.html enlaza el CV en español

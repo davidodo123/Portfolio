@@ -20,11 +20,14 @@ window.addEventListener('resize', measureSections);
 window.addEventListener('load', () => { measureSections(); updateNav(); });
 measureSections();
 
+// Idioma de la página (index.html = es, en.html = en)
+const EN = document.documentElement.lang === 'en';
+
 // Live clock — Granada (Europe/Madrid)
 function updateClock() {
   const el = document.getElementById('hero-clock');
   if (!el) return;
-  const t = new Date().toLocaleTimeString('es-ES', {
+  const t = new Date().toLocaleTimeString(EN ? 'en-GB' : 'es-ES', {
     hour: '2-digit', minute: '2-digit', second: '2-digit',
     timeZone: 'Europe/Madrid'
   });
@@ -73,14 +76,14 @@ setInterval(updateClock, 1000);
   const term = document.getElementById('term-body');
   const script = [
     { cmd: 'git push origin main' },
-    { out: 'Vercel: desplegando eat-em…', cls: 't-dim' },
-    { out: '✓ Listo en eat-em.vercel.app', cls: 't-ok' },
+    { out: EN ? 'Vercel: deploying eat-em…' : 'Vercel: desplegando eat-em…', cls: 't-dim' },
+    { out: EN ? '✓ Live at eat-em.vercel.app' : '✓ Listo en eat-em.vercel.app', cls: 't-ok' },
     { cmd: 'npm run scraper' },
-    { out: '✓ Precios de 5 supermercados al día', cls: 't-ok' },
+    { out: EN ? '✓ Prices from 5 supermarkets, up to date' : '✓ Precios de 5 supermercados al día', cls: 't-ok' },
     { cmd: 'npx cap run android' },
-    { out: '✓ Run-In-Out instalada en el móvil', cls: 't-ok' },
-    { cmd: 'ia --plan "semana de carrera"' },
-    { out: '✓ Plan ajustado a tu carga y recuperación', cls: 't-ok' },
+    { out: EN ? '✓ Run-In-Out installed on the phone' : '✓ Run-In-Out instalada en el móvil', cls: 't-ok' },
+    { cmd: EN ? 'ai --plan "race week"' : 'ia --plan "semana de carrera"' },
+    { out: EN ? '✓ Plan adjusted to your load and recovery' : '✓ Plan ajustado a tu carga y recuperación', cls: 't-ok' },
   ];
   const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;');
   let html = '';

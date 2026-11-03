@@ -78,6 +78,26 @@ nav {
 .nav-links a:hover {
   color: var(--accent);
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav-lang {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav-lang:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 .nav-cta {
   background: var(--accent);
   color: #fff;

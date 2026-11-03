@@ -43,3 +43,6 @@ tags: [decisiones]
 
 ## Precios-ML en el portfolio
 *2026-11-03* — Primer proyecto de machine learning, en su propio repo (`Precios-ML`). Con solo 19 días de histórico no tiene sentido predecir el precio a 7 días, así que se clasifica si cambiará en 3 días (ROC-AUC 0,65 frente a 0,53 de una regla simple). Va como tercera ficha tras las apps, con un gráfico de lift propio en vez de móvil; la sección pasa a llamarse "Proyectos con IA". Se añaden pandas y scikit-learn a las habilidades porque ahora sí se usan.
+
+## Versión en inglés
+*2026-11-03* — Página aparte `en.html` en la raíz (mismos estilos, imágenes y script), con botón EN/ES en el menú y `hreflang` en las dos. `script.js` mira el `lang` de la página para la hora y la terminal. Se generó con una lista de reemplazos que falla si algún texto no coincide; al cambiar textos en `index.html` hay que cambiarlos también en `en.html`. Alternativa descartada: traducir con JavaScript en una sola página (peor para buscadores y para quien no tiene JS). El CV en inglés de 2025 está desfasado (B1, sin Desguace Suspiro), así que de momento se enlaza el CV en español con la etiqueta "CV (Spanish)".

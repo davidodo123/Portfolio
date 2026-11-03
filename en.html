@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>David Santiago — Developer · Applied AI &amp; Data · Granada</title>
+<link rel="stylesheet" href="styles.css?v=23"/>
+<link rel="alternate" hreflang="es" href="index.html"/>
+<!-- Icons without blocking first paint -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/></noscript>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo"><img src="dsb-logo.webp" alt="DSB" class="nav-logo-img" width="240" height="126"/></div>
+  <ul class="nav-links">
+    <li><a href="#sobre">About</a></li>
+    <li><a href="#trayectoria">Experience</a></li>
+    <li><a href="#proyectos">Projects</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="index.html" class="nav-lang" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+    <a href="#contacto" class="nav-cta">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-top" data-reveal>
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Available to start now
+      </div>
+      <div class="hero-clock" id="hero-clock">--:--</div>
+    </div>
+    <div class="hero-main">
+      <div class="hero-name-block" data-reveal data-delay="1">
+        <h1 class="hero-name">David<br/>Santiago<span>.</span></h1>
+        <div class="hero-role">
+          <span class="hero-role-arrow">☞</span>
+          Developer · Applied AI &amp; Data · Granada
+        </div>
+      </div>
+      <div class="hero-visual" id="hero-visual" data-reveal data-delay="3">
+        <canvas id="net-canvas" aria-hidden="true"></canvas>
+        <div class="term">
+          <div class="term-bar">
+            <span></span><span></span><span></span>
+            <div class="term-title">david@granada: ~/projects</div>
+          </div>
+          <pre class="term-body" id="term-body" aria-label="Terminal with deploy commands from my projects"></pre>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom" data-reveal data-delay="2">
+      <p class="hero-bio">I build apps with <em>AI you can verify</em>: structured output, RAG, guardrails in code and evaluation suites. Hands-on company experience with <span class="hero-kw">OpenCode</span>, <span class="hero-kw">production SQL</span>, <span class="hero-kw">WordPress</span> and <span class="hero-kw">Laravel</span>.</p>
+      <div class="hero-right">
+        <span class="hero-location">Maracena → Granada, ES</span>
+        <div class="hero-links">
+          <a href="https://github.com/davidodo123" target="_blank">GitHub</a>
+          <a href="https://mail.google.com/mail/?view=cm&to=davidsantiagoybermudez@gmail.com" target="_blank">Gmail</a>
+          <a href="#contacto">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="sobre">
+  <div class="sobre-grid">
+    <div class="sobre-photo-wrap" data-reveal>
+      <img src="https://avatars.githubusercontent.com/u/187556243?v=4" width="460" height="460" loading="lazy" decoding="async"
+           alt="David Santiago Bermúdez"
+           class="sobre-photo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <div class="sobre-photo-ph" style="display:none">👨‍💻</div>
+    </div>
+    <div class="sobre-side" data-reveal data-delay="1">
+    <div class="sobre-cv-row">
+      <a href="MiCV.pdf" target="_blank" class="cv-btn">
+        <i class="fa-solid fa-file-pdf"></i> CV (Spanish)
+      </a>
+      <a href="MiCV.pdf" download="David_Santiago_CV.pdf" class="cv-btn cv-btn-ghost">
+        <i class="fa-solid fa-download"></i> Download
+      </a>
+    </div>
+    <div class="sobre-info">
+      <div class="si-item">
+        <div class="si-label">Location</div>
+        <div class="si-val">Maracena, Granada</div>
+      </div>
+      <div class="si-item">
+        <div class="si-label">Driving licence</div>
+        <div class="si-val">B</div>
+      </div>
+      <div class="si-item">
+        <div class="si-label">Availability</div>
+        <div class="si-val">Immediate</div>
+      </div>
+      <div class="si-item">
+        <div class="si-label">English</div>
+        <div class="si-val">B2 certified</div>
+      </div>
+      <div class="si-item">
+        <div class="si-label">GitHub</div>
+        <div class="si-val"><a href="https://github.com/davidodo123" target="_blank" style="color:var(--accent);text-decoration:none">davidodo123</a></div>
+      </div>
+      <div class="si-item">
+        <div class="si-label">Work area</div>
+        <div class="si-val">Granada province</div>
+      </div>
+    </div>
+    </div>
+    <div class="sobre-content" data-reveal data-delay="2">
+      <h2>I'm David,<br/>an applied AI<br/>developer in <span>Granada.</span></h2>
+      <p>22 years old. Science baccalaureate, two years of Electronic Engineering at the University of Jaén, and a Higher Vocational Degree in Web Application Development (DAW) at IES Zaidín Vergeles, where I am now taking the new <strong style="color:var(--ink)">Specialisation Course in Installation, Deployment and Operation of AI Systems</strong>, one of the first in Spain. At the same time I am studying the <strong style="color:var(--ink)">online Master’s in AI and Big Data at ILERNA</strong>. I hold the <strong style="color:var(--ink)">Google AI Professional Certificate</strong> (Coursera). I moved into development because I want to build real things, not just study them.</p>
+      <p>I have done internships at <strong style="color:var(--ink)">two companies in Granada</strong>: production SQL databases, WordPress server administration, a Laravel/Blade migration, cron automations, chatbots and <strong style="color:var(--ink)">AI-driven process automation (OpenCode)</strong>. Not just theory.</p>
+      <p>I work with <strong style="color:var(--ink)">Next.js, React and TypeScript</strong>, use <strong style="color:var(--ink)">Supabase (PostgreSQL + pgvector)</strong> as a backend and deploy on <strong style="color:var(--ink)">Vercel</strong>. I keep learning: there is always something new on my desk.</p>
+      <div class="skills-list">
+        <span class="skill-pill">HTML & CSS</span>
+        <span class="skill-pill">JavaScript</span>
+        <span class="skill-pill">TypeScript</span>
+        <span class="skill-pill">Next.js</span>
+        <span class="skill-pill">React</span>
+        <span class="skill-pill">Supabase</span>
+        <span class="skill-pill">pgvector</span>
+        <span class="skill-pill">RAG</span>
+        <span class="skill-pill">Structured Outputs</span>
+        <span class="skill-pill">LLM evaluation</span>
+        <span class="skill-pill">Vercel</span>
+        <span class="skill-pill">WordPress</span>
+        <span class="skill-pill">Laravel</span>
+        <span class="skill-pill">PHP / AJAX</span>
+        <span class="skill-pill">SQL</span>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">pandas</span>
+        <span class="skill-pill">scikit-learn</span>
+        <span class="skill-pill">Cron / CLI</span>
+        <span class="skill-pill">Web design</span>
+        <span class="skill-pill">Git & GitHub</span>
+        <span class="skill-pill">VPS & Hosting</span>
+        <span class="skill-pill">AI &amp; Chatbots</span>
+      </div>
+      <div class="learning">
+        <div class="learning-tag">// Currently learning</div>
+        <div class="learning-grid">
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <h3>Machine learning</h3>
+              <p>Training and evaluating models with Python in my specialisation course and master's. First project: Precios-ML, built on Eat-em's real data.</p>
+            </div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-gears"></i></div>
+            <div>
+              <h3>Automation</h3>
+              <p>Tasks that run themselves: daily scrapers on GitHub Actions, scheduled notifications and cron jobs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- EXPERIENCE -->
+<section id="trayectoria">
+  <div class="s-header" data-reveal>
+    <div class="s-tag">// Background</div>
+    <h2 class="s-title">Experience &amp; Education</h2>
+    <p class="s-sub">From theory to real production. Internships at Granada companies, live databases and current technologies.</p>
+  </div>
+
+  <!-- Stats -->
+  <div class="tray-stats" data-reveal>
+    <div class="tray-stat">
+      <span class="tray-stat-num">3</span>
+      <span class="tray-stat-label">Work experiences</span>
+    </div>
+    <div class="tray-stat">
+      <span class="tray-stat-num"><i class="fa-brands fa-google" style="font-size:0.75em"></i></span>
+      <span class="tray-stat-label">Google AI Professional Certificate</span>
+    </div>
+    <div class="tray-stat">
+      <span class="tray-stat-num">16+</span>
+      <span class="tray-stat-label">Technologies</span>
+    </div>
+    <div class="tray-stat">
+      <span class="tray-stat-num">3</span>
+      <span class="tray-stat-label">AI &amp; ML projects</span>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tray-tabs" data-reveal>
+    <button class="tray-tab active" data-tab="exp">Experience</button>
+    <button class="tray-tab" data-tab="edu">Education</button>
+  </div>
+
+  <!-- Experience panel -->
+  <div class="tray-panel" id="tray-exp">
+    <div class="tray-timeline">
+
+      <div class="tray-item" data-reveal>
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Desguace Suspiro</div>
+              <div class="tray-role">Web Developer — DAW internship, year 2</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">Feb – May 2026</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Granada</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Rolled out <strong>OpenCode</strong> (open-source AI agent) in the company: custom skills and prompts</li>
+            <li><strong>AI-driven automation</strong> of day-to-day business processes</li>
+            <li>Administration of a production WordPress server</li>
+            <li>Views, plugins, classes and <strong>PHP AJAX</strong> requests for WordPress</li>
+            <li>WordPress-to-Laravel migration tests: <strong>Blade</strong> templates</li>
+            <li>Process automation with scripts and scheduled <strong>cron</strong> jobs</li>
+            <li>Testing and integrating <strong>chatbots</strong> for business use</li>
+            <li>Advanced database queries, indexing and <strong>performance tuning</strong></li>
+            <li>Heavy data management and analysis in <strong>Excel</strong></li>
+          </ul>
+          <div class="tray-tags">
+            <span>IA / OpenCode</span><span>AI automation</span><span>WordPress</span><span>PHP</span><span>AJAX</span><span>Laravel</span><span>Blade</span><span>Cron</span><span>SQL</span><span>Excel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="1">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">FAECA Cooperative</div>
+              <div class="tray-role">Web Developer — DAW internship, year 1</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">May 2025</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Maracena</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Web development and maintenance with <strong>WordPress and Laravel</strong></li>
+            <li>Managing <strong>SQL databases in a live production environment</strong></li>
+            <li>Technical support and systems integration</li>
+          </ul>
+          <div class="tray-tags">
+            <span>WordPress</span><span>Laravel</span><span>SQL</span><span>PHP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="2">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Agricultural Worker</div>
+              <div class="tray-role">Family business · Olive harvest</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2022 – Present</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Granada</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Olive grove care and maintenance during the <strong>harvest season</strong></li>
+            <li>Teamwork with family, organising the field tasks</li>
+            <li>Built <strong>responsibility, effort and perseverance</strong> in demanding conditions</li>
+          </ul>
+          <div class="tray-tags">
+            <span>Teamwork</span><span>Responsibility</span><span>Perseverance</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Education panel -->
+  <div class="tray-panel hidden" id="tray-edu">
+    <div class="tray-timeline">
+
+      <div class="tray-item" data-reveal>
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Installation, Deployment and Operation of AI Systems</div>
+              <div class="tray-role">IES Zaidín Vergeles · Specialisation Course</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2026 – Present</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Granada</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>A new specialisation course in Spain, focused on <strong>Artificial Intelligence</strong></li>
+            <li>Installing, deploying and running AI systems in production</li>
+            <li><strong>Machine learning</strong> fundamentals</li>
+          </ul>
+          <div class="tray-tags">
+            <span>AI</span><span>Machine learning</span><span>Deployment</span><span>Systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="1">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Master's in AI and Big Data</div>
+              <div class="tray-role">ILERNA · Online</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2026 – Present</span>
+              <span class="tray-loc"><i class="fa-solid fa-laptop"></i> Online</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Online master's in <strong>Artificial Intelligence and Big Data</strong></li>
+            <li>Taken alongside the specialisation course</li>
+          </ul>
+          <div class="tray-tags">
+            <span>AI</span><span>Big Data</span><span>Online</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal>
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Web Application Development (DAW)</div>
+              <div class="tray-role">IES Zaidín Vergeles · Higher Vocational Degree</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2024 – 2026</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Granada</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Year 1 internship: FAECA Cooperative (May 2025)</li>
+            <li>Year 2 internship: Desguace Suspiro (Feb – May 2026)</li>
+          </ul>
+          <div class="tray-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>Laravel</span><span>SQL</span><span>WordPress</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="1">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Electronic Engineering</div>
+              <div class="tray-role">University of Jaén (UJA)</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2022 – 2024</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Jaén</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>2 years completed: foundations in maths, physics and programming</li>
+          </ul>
+          <div class="tray-tags">
+            <span>Electronics</span><span>Maths</span><span>Programming</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tray-item" data-reveal data-delay="2">
+        <div class="tray-dot"></div>
+        <div class="tray-card">
+          <div class="tray-card-head">
+            <div>
+              <div class="tray-company">Science Baccalaureate</div>
+              <div class="tray-role">IES Manuel de Falla, Maracena</div>
+            </div>
+            <div class="tray-meta">
+              <span class="tray-period">2020 – 2022</span>
+              <span class="tray-loc"><i class="fa-solid fa-location-dot"></i> Maracena</span>
+            </div>
+          </div>
+          <ul class="tray-bullets">
+            <li>Average grade 8.2 / 10</li>
+            <li>Arduino course (30 h)</li>
+          </ul>
+          <div class="tray-tags">
+            <span>Science</span><span>Arduino 30 h</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Certificates -->
+  <div class="certs-row" data-reveal>
+    <div class="cert-badge">
+      <i class="fa-brands fa-google"></i>
+      <span>Google AI Professional Certificate</span>
+    </div>
+    <div class="cert-badge">
+      <i class="fa-solid fa-language"></i>
+      <span>English B2</span>
+    </div>
+    <div class="cert-badge">
+      <i class="fa-solid fa-car"></i>
+      <span>Driving licence B</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="proyectos">
+  <!-- APPS -->
+  <div class="apps-wrap">
+    <div class="s-header" data-reveal>
+      <div class="s-tag">// Projects</div>
+      <h2 class="s-title">AI projects</h2>
+      <p class="s-sub">Two real apps with user accounts, a database, guarded AI and continuous deployment, plus a machine learning model trained on their data.</p>
+    </div>
+
+    <!-- Eat-em -->
+    <article class="app-feature" style="--accent:#1f7a55">
+      <div class="app-info" data-reveal>
+        <div class="app-head">
+          <img src="eat-em-icon.svg" alt="" class="app-icon"/>
+          <span class="app-kicker">App 01 · PWA</span>
+        </div>
+        <h3 class="app-name">Eat-em</h3>
+        <p class="app-tagline">Shopping, pantry and diet, in your pocket.</p>
+        <p class="app-desc">A mobile app shared with the people you live with: it knows what you are missing, what you have at home and what you will eat, with products and prices from the supermarkets near you.</p>
+        <ul class="app-features">
+          <li><i class="fa-solid fa-cart-shopping"></i><span><strong>Shopping list</strong> shared in real time, showing where each item is cheapest</span></li>
+          <li><i class="fa-solid fa-box-archive"></i><span><strong>Pantry</strong> with expiry dates, alerts and a barcode scanner</span></li>
+          <li><i class="fa-solid fa-utensils"></i><span><strong>Meal plan</strong> for the week or month filled in by AI from your profile, with health guardrails</span></li>
+          <li><i class="fa-solid fa-robot"></i><span><strong>Daily price scrapers</strong> on GitHub Actions, matched with Open Food Facts</span></li>
+        </ul>
+        <div class="app-stats">
+          <div><span class="app-stat-num">~80,000</span><span class="app-stat-label">products</span></div>
+          <div><span class="app-stat-num">5</span><span class="app-stat-label">supermarket chains</span></div>
+          <div><span class="app-stat-num">~18,900</span><span class="app-stat-label">stores on the map</span></div>
+        </div>
+        <div class="app-ai">
+          <div class="app-ai-tag">// How the AI works</div>
+          <dl>
+            <div><dt>Model</dt><dd>Nemotron 3.5 Super (NVIDIA) via OpenRouter, with a fallback model if the main one is withdrawn. <code>text-embedding-3-small</code> embeddings.</dd></div>
+            <div><dt>Prompt</dt><dd>Structured Outputs with a strict JSON Schema and temperature 0.3. The code checks calories, macros and ingredients and, on failure, retries up to twice, feeding the errors back to the model.</dd></div>
+            <div><dt>RAG</dt><dd>Nutrition guideline cards embedded in <strong>pgvector</strong> (Supabase); the relevant ones are retrieved and added to the context.</dd></div>
+            <div><dt>Guardrails</dt><dd>A pre-filter in code runs before any AI call: minors, pregnancy, breastfeeding, medical conditions or BMI &lt; 18.5 are referred to a professional. Only catalogue ingredients are allowed.</dd></div>
+            <div><dt>Evaluation</dt><dd>A 50-question test suite. Latest run (20): <strong>100% on guardrails</strong> and 0 made-up ingredients.</dd></div>
+            <div><dt>Cost</dt><dd><strong>€0 per request</strong>: free model, with a quota of about 50 requests a day.</dd></div>
+          </dl>
+        </div>
+        <div class="app-stack">
+          <span>Next.js</span><span>React</span><span>TypeScript</span><span>Supabase</span><span>pgvector</span><span>OpenRouter</span><span>Structured Outputs</span><span>Tailwind</span><span>GitHub Actions</span><span>Vercel</span>
+        </div>
+        <div class="app-links">
+          <a href="https://eat-em.vercel.app" target="_blank" class="app-btn">Open the app <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/davidodo123/Eat-em" target="_blank" class="app-btn app-btn-ghost"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+      <div class="app-visual" data-reveal data-delay="2">
+        <div class="phone"><img src="eat-em.webp" alt="Eat-em home screen" width="600" height="1298" loading="lazy" decoding="async"/></div>
+      </div>
+    </article>
+
+    <!-- Run-In-Out -->
+    <article class="app-feature app-feature-rev" style="--accent:#5a6e00">
+      <div class="app-info" data-reveal>
+        <div class="app-head">
+          <img src="run-in-out-icon.svg" alt="" class="app-icon"/>
+          <span class="app-kicker">App 02 · PWA + Android</span>
+        </div>
+        <h3 class="app-name">Run-In-Out</h3>
+        <p class="app-tagline">Your plan, your workouts and your friends’.</p>
+        <p class="app-desc">A training app for runners: periodised plans towards a race, workout logging, fitness and fatigue tracking, and an AI coach that adapts the routine based on sports science.</p>
+        <ul class="app-features">
+          <li><i class="fa-solid fa-person-running"></i><span><strong>Plans and seasons</strong> towards your race, with GPS recording and maps from Strava, GPX and FIT</span></li>
+          <li><i class="fa-solid fa-brain"></i><span><strong>AI coach</strong> that adjusts the routine to how you feel, your load and recovery</span></li>
+          <li><i class="fa-solid fa-dumbbell"></i><span><strong>Strength</strong> with routines, sets, records and estimated 1RM</span></li>
+          <li><i class="fa-solid fa-user-group"></i><span><strong>Friends</strong>, shared sessions, achievements and personal bests</span></li>
+        </ul>
+        <div class="app-stats">
+          <div><span class="app-stat-num">7</span><span class="app-stat-label">development phases</span></div>
+          <div><span class="app-stat-num">2</span><span class="app-stat-label">sports: running and strength</span></div>
+          <div><span class="app-stat-num">iOS · Android</span><span class="app-stat-label">PWA and Capacitor app</span></div>
+        </div>
+        <div class="app-ai">
+          <div class="app-ai-tag">// How the AI works</div>
+          <dl>
+            <div><dt>Model</dt><dd>A chain of open models via OpenRouter: Nemotron 3.5 Super and, if it is overloaded, Gemma 4 31B and 26B.</dd></div>
+            <div><dt>Prompt</dt><dd>JSON response built from the athlete’s signals: acute/chronic load (ACWR), TSB, RPE, how they feel, sleep, pain and missed sessions.</dd></div>
+            <div><dt>RAG</dt><dd>A training-science study split into sections; stem and synonym search picks the top 3 for the prompt, which must apply their rules and cite them.</dd></div>
+            <div><dt>Guardrails</dt><dd>The planner owns phases and volume; the AI only adjusts the next 14 days. Code enforces limits: +15% distance per session, nothing above the 30-day long run + 10%, and a −30% deload.</dd></div>
+            <div><dt>Cost</dt><dd><strong>€0 per request</strong>: free models and at most one plan review per user per day.</dd></div>
+          </dl>
+        </div>
+        <div class="app-stack">
+          <span>Next.js</span><span>React</span><span>TypeScript</span><span>OpenRouter</span><span>RAG</span><span>Tailwind</span><span>Redis</span><span>Capacitor</span><span>Vercel</span>
+        </div>
+        <div class="app-links">
+          <a href="https://run-in-out.vercel.app" target="_blank" class="app-btn">Open the app <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/davidodo123/StatsRun" target="_blank" class="app-btn app-btn-ghost"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+      <div class="app-visual" data-reveal data-delay="2">
+        <div class="phone"><img src="run-in-out.webp" alt="Run-In-Out sign-in screen" width="600" height="1298" loading="lazy" decoding="async"/></div>
+      </div>
+    </article>
+
+    <!-- Precios-ML -->
+    <article class="app-feature">
+      <div class="app-info" data-reveal>
+        <div class="app-head">
+          <span class="app-kicker">Project 03 · Machine learning</span>
+        </div>
+        <h3 class="app-name">Precios-ML</h3>
+        <p class="app-tagline">Which products will change price this week?</p>
+        <p class="app-desc">A model trained on the real price history collected by Eat-em’s scrapers: it predicts whether a product’s price will change in the next 3 days.</p>
+        <ul class="app-features">
+          <li><i class="fa-solid fa-database"></i><span><strong>Own data</strong>: 1 million prices for ~86,000 products from Carrefour, Gadis and Ahorramás, pulled from Supabase</span></li>
+          <li><i class="fa-solid fa-scale-balanced"></i><span><strong>Honest framing</strong>: only 1% of prices change from one day to the next, so the model classifies change instead of predicting the price</span></li>
+          <li><i class="fa-solid fa-clock-rotate-left"></i><span><strong>Time-based split</strong>: trained on cut-offs from 22 to 26 October and tested on 30 and 31 October, never seeing the future</span></li>
+          <li><i class="fa-solid fa-chart-column"></i><span><strong>Compared with baselines</strong>: random and simple rules, using ROC-AUC, PR-AUC and permutation importance</span></li>
+        </ul>
+        <div class="app-stats">
+          <div><span class="app-stat-num">0.65</span><span class="app-stat-label">ROC-AUC (simple rule: 0.53)</span></div>
+          <div><span class="app-stat-num">2.9×</span><span class="app-stat-label">hit rate in the top 1,000 vs. average</span></div>
+          <div><span class="app-stat-num">1 M</span><span class="app-stat-label">real prices</span></div>
+        </div>
+        <div class="app-stack">
+          <span>Python</span><span>pandas</span><span>scikit-learn</span><span>Gradient boosting</span><span>matplotlib</span><span>Jupyter</span><span>Supabase</span>
+        </div>
+        <div class="app-links">
+          <a href="https://github.com/davidodo123/Precios-ML/blob/main/precios.ipynb" target="_blank" class="app-btn">View the notebook <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="https://github.com/davidodo123/Precios-ML" target="_blank" class="app-btn app-btn-ghost"><i class="fa-brands fa-github"></i> Code</a>
+        </div>
+      </div>
+      <div class="app-visual" data-reveal data-delay="2">
+        <figure class="ml-chart">
+          <img src="precios-ml.png" alt="Chart: products in the model’s top decile change price 1.8 times more often than average, those in the bottom decile 0.4 times" width="1200" height="780" loading="lazy" decoding="async"/>
+          <figcaption>Price changes by model decile in the test week (chart labels in Spanish)</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <div class="s-header webs-head" data-reveal>
+      <div class="s-tag">// Extra</div>
+      <h2 class="s-title">Front-end websites</h2>
+      <p class="s-sub">Design and layout practice with HTML, CSS and JavaScript.</p>
+    </div>
+  </div>
+
+  <!-- WEBS -->
+  <div class="deck-section">
+
+    <div class="proj-label">
+      <span class="proj-label-count" id="proj-count">01 / 03</span>
+    </div>
+
+    <div class="deck" id="deck" tabindex="0" aria-label="Website deck: click a card or use the arrow keys to go to the next one">
+
+      <!-- 01 -->
+      <div class="proj-slide" data-idx="0">
+        <div class="proj-slide-card">
+          <img src="peru.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Peru"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">01</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Peru</div>
+              <div class="proj-card-tags"><span>Tourism</span><span>Immersive design</span><span>Live demo</span></div>
+              <a href="https://davidodo123.github.io/Peru/" target="_blank" class="proj-slide-link">View project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="proj-slide" data-idx="1">
+        <div class="proj-slide-card">
+          <img src="moi.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Moi"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">02</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Moi</div>
+              <div class="proj-card-tags"><span>Restaurant</span><span>Luxury</span><span>Elegance</span></div>
+              <a href="https://davidodo123.github.io/Moi/" target="_blank" class="proj-slide-link">View project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="proj-slide" data-idx="2">
+        <div class="proj-slide-card">
+          <img src="skylander.webp" width="1600" height="800" loading="lazy" decoding="async" alt="Skylander"/>
+          <div class="proj-card-overlay">
+            <div class="proj-card-top"><span class="proj-card-num">03</span><span class="proj-card-tech">HTML / CSS / JS</span></div>
+            <div class="proj-card-bottom">
+              <div class="proj-card-name">Skylander</div>
+              <div class="proj-card-tags"><span>Sport</span><span>Adrenaline</span><span>Bold design</span></div>
+              <a href="https://davidodo123.github.io/Skylander/" target="_blank" class="proj-slide-link">View project →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="deck-controls">
+      <button class="deck-btn" id="deck-prev" aria-label="Previous website"><i class="fa-solid fa-arrow-left"></i></button>
+      <span class="deck-hint">Click the card to see the next one</span>
+      <button class="deck-btn" id="deck-next" aria-label="Next website"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto">
+  <div class="contacto-inner">
+    <div class="s-tag">// Contact</div>
+    <div class="contact-cards" data-reveal>
+      <a href="tel:+34642805990" class="cc">
+        <div class="cc-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <div>
+          <div class="cc-label">Phone / WhatsApp</div>
+          <div class="cc-val">+34 642 80 59 90</div>
+        </div>
+      </a>
+      <a href="mailto:davidsantiagoybermudez@gmail.com" class="cc">
+        <div class="cc-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div>
+          <div class="cc-label">Email</div>
+          <div class="cc-val">davidsantiagoybermudez@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://github.com/davidodo123" target="_blank" class="cc">
+        <div class="cc-icon"><i class="fa-brands fa-github"></i></div>
+        <div>
+          <div class="cc-label">GitHub — more projects</div>
+          <div class="cc-val">davidodo123</div>
+        </div>
+      </a>
+      <div class="cc" style="cursor:default">
+        <div class="cc-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div>
+          <div class="cc-label">Based in</div>
+          <div class="cc-val">Granada, Spain</div>
+        </div>
+      </div>
+    </div>
+    <a href="tel:+34642805990" class="big-cta" data-reveal data-delay="2">Call now · +34 642 80 59 90</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 David Santiago Bermúdez · Developer · Applied AI &amp; Data · Granada</span>
+  <span>Built with HTML, CSS and enthusiasm — <a href="https://github.com/davidodo123" target="_blank">github.com/davidodo123</a></span>
+</footer>
+
+<script src="script.js?v=14"></script>
+</body>
+</html>
