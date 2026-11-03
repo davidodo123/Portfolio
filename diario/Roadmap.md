@@ -21,7 +21,7 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Webs como mazo de cartas: pulsar la tarjeta pasa a la siguiente con animación; las demás asoman por detrás. Adiós al scroll de 4 pantallas → [[Decisiones#Webs en mazo de cartas]]
 - [x] Rendimiento: imágenes a WebP (9,9 MB → 0,4 MB al entrar), carga diferida, animaciones en pausa fuera de pantalla
 - [ ] Cambiar las capturas de Eat-em y Run-In-Out por pantallas de dentro de la app (`eat-em.jpg`, `run-in-out.jpg`)
-- [ ] Revisar textos de Contacto ahora que no hay Servicios
+- [x] Revisar textos de Contacto: título "¿Hablamos?", frase para empresas y botón de email en vez de "Llamar ahora" (también en inglés)
 - [x] Run-In-Out con sus colores nuevos (negro y lima, como la app): tarjeta oscura, icono y captura de entrada nueva → [[Decisiones#Run-In-Out con sus colores]]
 - [x] Conectar la carpeta al repo público github.com/davidodo123/Portfolio y subir los cambios
 - [x] Desplegar en Vercel → https://portfoliodsb.vercel.app
@@ -44,4 +44,5 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [ ] Proyecto ML: RAG sobre CIMA (AEMPS) con repo, demo y métricas
 - [x] Proyecto ML: Precios-ML (¿cambiará el precio en 3 días?) con los datos de Eat-em, repo público y ficha → [[Decisiones#Precios-ML en el portfolio]]
 - [x] Versión en inglés del portfolio (`en.html`, botón ES/EN en el menú) → [[Decisiones#Versión en inglés]]
+- [x] Gráfico de Precios-ML también en inglés (`precios-ml-en.png`, generado con `grafico_portfolio.py` del repo Precios-ML)
 - [ ] CV en inglés actualizado (el de 2025 dice B1 y no tiene Desguace Suspiro); hasta entonces en.html enlaza el CV en español
