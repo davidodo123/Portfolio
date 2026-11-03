@@ -37,3 +37,6 @@ tags: [decisiones]
 
 ## Portfolio orientado a puestos de IA
 *2026-11-03* — David trae una revisión del portfolio para buscar contrato en puestos de IA y datos. Se cambia el título a "Desarrollador · IA aplicada y datos · Granada", se quitan los mensajes de freelance, se explica la IA de Eat-em y Run-In-Out con datos sacados de su código (modelos de OpenRouter, Structured Outputs, RAG, prefiltro y topes en código, evaluación, 0 € por petición), se quitan Valeo y la media 6,4 y las webs pasan a "Webs de front-end" sin TØP. Alternativa descartada para las webs: dejar solo un enlace a GitHub (el mazo ya está al final y funciona). No se añaden a la web el RAG de CIMA ni el forecasting hasta que existan: no hay código de ninguno. Tampoco se desglosa Python en pandas, scikit-learn, FastAPI o Docker porque ninguno aparece aún en los proyectos.
+
+## Apps con el mismo fondo claro
+*2026-11-03* — A David no le gusta que Eat-em vaya en claro y Run-In-Out en negro. Elegido: las dos con el fondo claro de la web; Run-In-Out lleva de acento un verde oliva oscuro (`#5a6e00`), porque el lima no se lee sobre claro, y el lima queda en el icono y la captura. Se quita la clase `app-volt`. Descartadas: las dos en negro, y las dos con el azul de la web como acento. Sustituye a [[Decisiones#Run-In-Out con sus colores]].

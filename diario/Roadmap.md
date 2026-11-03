@@ -40,6 +40,7 @@ Leyenda: `[x]` hecho · `[ ]` pendiente · `[/]` empezado · `[-]` descartado
 - [x] Inglés: B2 confirmado por David; MiCV.pdf actualizado
 - [x] Certificado de Google con su nombre: Google AI Professional Certificate (Coursera)
 - [x] Desguace Suspiro: "procesos de automatización con IA" junto a OpenCode, sin cifra (decisión de David)
+- [x] Eat-em y Run-In-Out con el mismo fondo claro; Run-In-Out con acento oliva → [[Decisiones#Apps con el mismo fondo claro]]
 - [ ] Proyecto ML: RAG sobre CIMA (AEMPS) con repo, demo y métricas
 - [ ] Proyecto ML: forecasting de precios con los datos de Eat-em (~80.000 productos, 5 cadenas), notebook y métricas
 - [ ] Versión en inglés del portfolio
